@@ -23,6 +23,21 @@ def main() -> None:
 
     masses = {w: rho(17, w) for w in range(1, 18)}
     minimum = min(masses.values())
+    further_expected = {18: 87, 19: 110, 20: 138, 21: 171, 22: 209}
+    further_bounds = {}
+    for dimension, expected_bound in further_expected.items():
+        dimension_masses = {
+            w: rho(dimension, w) for w in range(1, dimension + 1)
+        }
+        dimension_minimum = min(dimension_masses.values())
+        further_bounds[str(dimension)] = {
+            "minimum_rho": str(dimension_minimum),
+            "minimum_weights": [
+                w for w, value in dimension_masses.items()
+                if value == dimension_minimum
+            ],
+            "chain_upper_bound": floor(Fraction(1) / dimension_minimum),
+        }
     certificate = {
         "claim": "A286874(17)=68",
         "construction": verification,
@@ -38,7 +53,15 @@ def main() -> None:
         "minimum_rho": str(minimum),
         "minimum_weights": [w for w, value in masses.items() if value == minimum],
         "chain_upper_bound": floor(Fraction(1) / minimum),
-        "proved": verification["valid"] and minimum == Fraction(1, 68),
+        "further_chain_upper_bounds": further_bounds,
+        "proved": (
+            verification["valid"]
+            and minimum == Fraction(1, 68)
+            and all(
+                further_bounds[str(n)]["chain_upper_bound"] == expected
+                for n, expected in further_expected.items()
+            )
+        ),
     }
     if not certificate["proved"] or not certificate["construction_is_S_3_5_17"]:
         raise AssertionError("a(17)=68 certificate failed")

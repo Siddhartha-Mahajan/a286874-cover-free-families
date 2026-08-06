@@ -13,7 +13,10 @@ A286874(17) = 68.
 
 The `n=15` and `n=17` statements are exact evaluations.  The `n=16`
 statement improves the unrestricted upper bound; no exact value at `n=16` is
-claimed.
+claimed.  The same all-dimensions chain theorem additionally gives
+`a(18)<=87`, `a(19)<=110`, `a(20)<=138`, `a(21)<=171`, and `a(22)<=209`;
+these are stated as consequences of this method, not as a claim about the
+best bounds from all sources.
 
 ## Independent verification
 

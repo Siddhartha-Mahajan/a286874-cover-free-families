@@ -20,6 +20,44 @@
   },
   "construction_is_S_3_5_17": true,
   "distinct_construction_triples": 680,
+  "further_chain_upper_bounds": {
+    "18": {
+      "chain_upper_bound": 87,
+      "minimum_rho": "7/612",
+      "minimum_weights": [
+        7
+      ]
+    },
+    "19": {
+      "chain_upper_bound": 110,
+      "minimum_rho": "35/3876",
+      "minimum_weights": [
+        7
+      ]
+    },
+    "20": {
+      "chain_upper_bound": 138,
+      "minimum_rho": "7/969",
+      "minimum_weights": [
+        7
+      ]
+    },
+    "21": {
+      "chain_upper_bound": 171,
+      "minimum_rho": "1/171",
+      "minimum_weights": [
+        7
+      ]
+    },
+    "22": {
+      "chain_upper_bound": 209,
+      "minimum_rho": "1/209",
+      "minimum_weights": [
+        7,
+        9
+      ]
+    }
+  },
   "minimum_rho": "1/68",
   "minimum_weights": [
     5,

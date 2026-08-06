@@ -13,6 +13,7 @@ def main() -> None:
         for path in PACKAGE.rglob("*")
         if path.is_file()
         and path not in excluded
+        and ".git" not in path.parts
         and "__pycache__" not in path.parts
         and not path.name.endswith(".pyc")
     )

@@ -42,9 +42,11 @@ classified `a(14)` family.
   Gunderson seed.  They document discovery but are not trusted by the proof.
 - `discovery/README.md` records the two-stage search and dependency boundary.
 - `scripts/certify_a17_exact.py` verifies the cover-free property, checks that
-  all 680 triples occur exactly once, and computes all mixed-weight chain
-  masses.
+  all 680 triples occur exactly once, computes all mixed-weight chain masses
+  at `n=17`, and evaluates the same universal bound for `n=18` through `22`.
 - `certificates/a17_exact.json` records the `S(3,5,17)` and upper-bound checks.
+  It also records `a(18)<=87`, `a(19)<=110`, `a(20)<=138`, `a(21)<=171`, and
+  `a(22)<=209` as consequences of the private-chain method.
 
 ## Whole-package replay
 

@@ -156,6 +156,26 @@ their $68\binomc53=680=\binomc{17}3$ triples are all distinct.  Hence they
 form an $S(3,5,17)$ and are 2-cover-free: a third 5-block has at most four
 points in the union of any two others.  Thus $a(17)=68$.
 
+The same theorem applies at every dimension, whether or not it is sharp.  An
+exact evaluation of the minimum chain mass gives the following immediate
+consequences of this method:
+\begin{center}
+\begin{tabular}{c@{\qquad}c@{\qquad}c@{\qquad}c}
+\toprule
+$n$ & $\min_w\rho(n,w)$ & minimizing weight(s) & resulting bound \\
+\midrule
+18 & $7/612$   & 7   & $a(18)\leq87$ \\
+19 & $35/3876$ & 7   & $a(19)\leq110$ \\
+20 & $7/969$   & 7   & $a(20)\leq138$ \\
+21 & $1/171$   & 7   & $a(21)\leq171$ \\
+22 & $1/209$   & 7,9 & $a(22)\leq209$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+These are universal mixed-weight bounds furnished by
+Theorem~\ref{thm:chain}; no assertion is made here that they improve every
+previously published bound.
+
 \section{The exact value at 15}
 
 Gunderson's construction in
@@ -393,7 +413,8 @@ Paths are relative to the repository root.
  \item[\path{scripts/certify_a17_exact.py}.]
  Complete executable verification of the $n=17$ construction and upper bound.
  It checks the $S(3,5,17)$ incidence properties, direct cover-freeness, and
- $\rho(17,w)\geq1/68$ for all $1\leq w\leq17$.
+ $\rho(17,w)\geq1/68$ for all $1\leq w\leq17$.  It also evaluates the same
+ exact bound for $18\leq n\leq22$ and records the five displayed corollaries.
 
  \item[\path{scripts/replay_all.py}.]
  The public replay entry point.  It invokes all three certifiers, checks their
@@ -445,7 +466,8 @@ are not inputs to the lower-bound verification or to any upper-bound proof.
 
  \item[\path{certificates/a17_exact.json}.]
  Deterministic record of the construction incidence checks and all 17 private
- chain masses used for $n=17$.
+ chain masses used for $n=17$, together with the minimum masses, minimizing
+ weights and resulting universal bounds for $18\leq n\leq22$.
 
  \item[\path{certificates/replay_summary.json}.]
  Aggregate pass/fail record written only after all three individual
