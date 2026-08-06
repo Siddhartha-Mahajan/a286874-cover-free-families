@@ -1,0 +1,1208 @@
+{
+  "S_3_5_16_point_replication": "35/2",
+  "claim": "48 <= A286874(16) <= 54",
+  "delta5_nonprivate_triple": "11/2184",
+  "delta7_nonprivate_four_subset": "3/3640",
+  "lower_witness": {
+    "claimed": 48,
+    "counterexample": null,
+    "distinct": 48,
+    "n": 16,
+    "pair_intersection_histogram": {
+      "0": 168,
+      "1": 240,
+      "2": 720
+    },
+    "parsed": 48,
+    "path": "constructions/a16_48.txt",
+    "valid": true,
+    "weight_histogram": {
+      "5": 48
+    }
+  },
+  "m55_chain_feasible_profile_count": 97,
+  "m55_profile_records": [
+    {
+      "chain_slack": "0",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 0,
+      "weight_profile": {
+        "5": 42,
+        "7": 13
+      }
+    },
+    {
+      "chain_slack": "1/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 1,
+      "weight_profile": {
+        "5": 43,
+        "7": 12
+      }
+    },
+    {
+      "chain_slack": "1/364",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 3,
+      "weight_profile": {
+        "5": 44,
+        "7": 11
+      }
+    },
+    {
+      "chain_slack": "0",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 0,
+      "weight_profile": {
+        "5": 44,
+        "6": 1,
+        "7": 10
+      }
+    },
+    {
+      "chain_slack": "3/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 5,
+      "weight_profile": {
+        "5": 45,
+        "7": 10
+      }
+    },
+    {
+      "chain_slack": "1/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 1,
+      "weight_profile": {
+        "5": 45,
+        "6": 1,
+        "7": 9
+      }
+    },
+    {
+      "chain_slack": "1/182",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 6,
+      "weight_profile": {
+        "5": 46,
+        "7": 9
+      }
+    },
+    {
+      "chain_slack": "1/364",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 3,
+      "weight_profile": {
+        "5": 46,
+        "6": 1,
+        "7": 8
+      }
+    },
+    {
+      "chain_slack": "0",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 0,
+      "weight_profile": {
+        "5": 46,
+        "6": 2,
+        "7": 7
+      }
+    },
+    {
+      "chain_slack": "1/2184",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 0,
+      "weight_profile": {
+        "5": 47,
+        "7": 7,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "5/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 8,
+      "weight_profile": {
+        "5": 47,
+        "7": 8
+      }
+    },
+    {
+      "chain_slack": "3/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 5,
+      "weight_profile": {
+        "5": 47,
+        "6": 1,
+        "7": 7
+      }
+    },
+    {
+      "chain_slack": "1/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 1,
+      "weight_profile": {
+        "5": 47,
+        "6": 2,
+        "7": 6
+      }
+    },
+    {
+      "chain_slack": "1/546",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 2,
+      "weight_profile": {
+        "5": 48,
+        "7": 6,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "3/364",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 10,
+      "weight_profile": {
+        "5": 48,
+        "7": 7
+      }
+    },
+    {
+      "chain_slack": "1/182",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 6,
+      "weight_profile": {
+        "5": 48,
+        "6": 1,
+        "7": 6
+      }
+    },
+    {
+      "chain_slack": "1/364",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 3,
+      "weight_profile": {
+        "5": 48,
+        "6": 2,
+        "7": 5
+      }
+    },
+    {
+      "chain_slack": "0",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 0,
+      "weight_profile": {
+        "5": 48,
+        "6": 3,
+        "7": 4
+      }
+    },
+    {
+      "chain_slack": "0",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 0,
+      "weight_profile": {
+        "5": 49,
+        "7": 5,
+        "9": 1
+      }
+    },
+    {
+      "chain_slack": "1/312",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 3,
+      "weight_profile": {
+        "5": 49,
+        "7": 5,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "1/104",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 11,
+      "weight_profile": {
+        "5": 49,
+        "7": 6
+      }
+    },
+    {
+      "chain_slack": "1/2184",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 0,
+      "weight_profile": {
+        "5": 49,
+        "6": 1,
+        "7": 4,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "5/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 8,
+      "weight_profile": {
+        "5": 49,
+        "6": 1,
+        "7": 5
+      }
+    },
+    {
+      "chain_slack": "3/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 5,
+      "weight_profile": {
+        "5": 49,
+        "6": 2,
+        "7": 4
+      }
+    },
+    {
+      "chain_slack": "1/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 1,
+      "weight_profile": {
+        "5": 49,
+        "6": 3,
+        "7": 3
+      }
+    },
+    {
+      "chain_slack": "1/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 1,
+      "weight_profile": {
+        "5": 50,
+        "7": 4,
+        "9": 1
+      }
+    },
+    {
+      "chain_slack": "5/1092",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 5,
+      "weight_profile": {
+        "5": 50,
+        "7": 4,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "1/91",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 2,
+      "q7_max_if_all_slack_used_there": 13,
+      "weight_profile": {
+        "5": 50,
+        "7": 5
+      }
+    },
+    {
+      "chain_slack": "1/546",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 2,
+      "weight_profile": {
+        "5": 50,
+        "6": 1,
+        "7": 3,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "3/364",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 10,
+      "weight_profile": {
+        "5": 50,
+        "6": 1,
+        "7": 4
+      }
+    },
+    {
+      "chain_slack": "1/182",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 6,
+      "weight_profile": {
+        "5": 50,
+        "6": 2,
+        "7": 3
+      }
+    },
+    {
+      "chain_slack": "1/364",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 3,
+      "weight_profile": {
+        "5": 50,
+        "6": 3,
+        "7": 2
+      }
+    },
+    {
+      "chain_slack": "0",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 0,
+      "weight_profile": {
+        "5": 50,
+        "6": 4,
+        "7": 1
+      }
+    },
+    {
+      "chain_slack": "1/364",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 3,
+      "weight_profile": {
+        "5": 51,
+        "7": 3,
+        "9": 1
+      }
+    },
+    {
+      "chain_slack": "1/168",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 7,
+      "weight_profile": {
+        "5": 51,
+        "7": 3,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "9/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 2,
+      "q7_max_if_all_slack_used_there": 15,
+      "weight_profile": {
+        "5": 51,
+        "7": 4
+      }
+    },
+    {
+      "chain_slack": "0",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 0,
+      "weight_profile": {
+        "5": 51,
+        "6": 1,
+        "7": 2,
+        "9": 1
+      }
+    },
+    {
+      "chain_slack": "1/312",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 3,
+      "weight_profile": {
+        "5": 51,
+        "6": 1,
+        "7": 2,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "1/104",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 11,
+      "weight_profile": {
+        "5": 51,
+        "6": 1,
+        "7": 3
+      }
+    },
+    {
+      "chain_slack": "1/2184",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 0,
+      "weight_profile": {
+        "5": 51,
+        "6": 2,
+        "7": 1,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "5/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 8,
+      "weight_profile": {
+        "5": 51,
+        "6": 2,
+        "7": 2
+      }
+    },
+    {
+      "chain_slack": "3/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 5,
+      "weight_profile": {
+        "5": 51,
+        "6": 3,
+        "7": 1
+      }
+    },
+    {
+      "chain_slack": "1/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 1,
+      "weight_profile": {
+        "5": 51,
+        "6": 4
+      }
+    },
+    {
+      "chain_slack": "1/1092",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 1,
+      "weight_profile": {
+        "5": 52,
+        "7": 1,
+        "8": 2
+      }
+    },
+    {
+      "chain_slack": "3/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 5,
+      "weight_profile": {
+        "5": 52,
+        "7": 2,
+        "9": 1
+      }
+    },
+    {
+      "chain_slack": "2/273",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 8,
+      "weight_profile": {
+        "5": 52,
+        "7": 2,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "5/364",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 2,
+      "q7_max_if_all_slack_used_there": 16,
+      "weight_profile": {
+        "5": 52,
+        "7": 3
+      }
+    },
+    {
+      "chain_slack": "1/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 1,
+      "weight_profile": {
+        "5": 52,
+        "6": 1,
+        "7": 1,
+        "9": 1
+      }
+    },
+    {
+      "chain_slack": "5/1092",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 5,
+      "weight_profile": {
+        "5": 52,
+        "6": 1,
+        "7": 1,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "1/91",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 2,
+      "q7_max_if_all_slack_used_there": 13,
+      "weight_profile": {
+        "5": 52,
+        "6": 1,
+        "7": 2
+      }
+    },
+    {
+      "chain_slack": "1/546",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 2,
+      "weight_profile": {
+        "5": 52,
+        "6": 2,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "3/364",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 10,
+      "weight_profile": {
+        "5": 52,
+        "6": 2,
+        "7": 1
+      }
+    },
+    {
+      "chain_slack": "1/182",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 6,
+      "weight_profile": {
+        "5": 52,
+        "6": 3
+      }
+    },
+    {
+      "chain_slack": "5/2184",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 2,
+      "weight_profile": {
+        "5": 53,
+        "8": 2
+      }
+    },
+    {
+      "chain_slack": "1/182",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 6,
+      "weight_profile": {
+        "5": 53,
+        "7": 1,
+        "9": 1
+      }
+    },
+    {
+      "chain_slack": "19/2184",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 10,
+      "weight_profile": {
+        "5": 53,
+        "7": 1,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "11/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 3,
+      "q7_max_if_all_slack_used_there": 18,
+      "weight_profile": {
+        "5": 53,
+        "7": 2
+      }
+    },
+    {
+      "chain_slack": "1/364",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 3,
+      "weight_profile": {
+        "5": 53,
+        "6": 1,
+        "9": 1
+      }
+    },
+    {
+      "chain_slack": "1/168",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 7,
+      "weight_profile": {
+        "5": 53,
+        "6": 1,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "9/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 2,
+      "q7_max_if_all_slack_used_there": 15,
+      "weight_profile": {
+        "5": 53,
+        "6": 1,
+        "7": 1
+      }
+    },
+    {
+      "chain_slack": "1/104",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 11,
+      "weight_profile": {
+        "5": 53,
+        "6": 2
+      }
+    },
+    {
+      "chain_slack": "5/728",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 8,
+      "weight_profile": {
+        "5": 54,
+        "9": 1
+      }
+    },
+    {
+      "chain_slack": "11/1092",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 2,
+      "q7_max_if_all_slack_used_there": 12,
+      "weight_profile": {
+        "5": 54,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "3/182",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 3,
+      "q7_max_if_all_slack_used_there": 20,
+      "weight_profile": {
+        "5": 54,
+        "7": 1
+      }
+    },
+    {
+      "chain_slack": "5/364",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 2,
+      "q7_max_if_all_slack_used_there": 16,
+      "weight_profile": {
+        "5": 54,
+        "6": 1
+      }
+    },
+    {
+      "chain_slack": "1/56",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 3,
+      "q7_max_if_all_slack_used_there": 21,
+      "weight_profile": {
+        "5": 55
+      }
+    },
+    {
+      "chain_slack": "1/3640",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 0,
+      "weight_profile": {
+        "4": 1,
+        "5": 49,
+        "7": 5
+      }
+    },
+    {
+      "chain_slack": "3/1820",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 2,
+      "weight_profile": {
+        "4": 1,
+        "5": 50,
+        "7": 4
+      }
+    },
+    {
+      "chain_slack": "11/3640",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 3,
+      "weight_profile": {
+        "4": 1,
+        "5": 51,
+        "7": 3
+      }
+    },
+    {
+      "chain_slack": "1/3640",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 0,
+      "weight_profile": {
+        "4": 1,
+        "5": 51,
+        "6": 1,
+        "7": 2
+      }
+    },
+    {
+      "chain_slack": "2/455",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 5,
+      "weight_profile": {
+        "4": 1,
+        "5": 52,
+        "7": 2
+      }
+    },
+    {
+      "chain_slack": "3/1820",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 2,
+      "weight_profile": {
+        "4": 1,
+        "5": 52,
+        "6": 1,
+        "7": 1
+      }
+    },
+    {
+      "chain_slack": "3/520",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 7,
+      "weight_profile": {
+        "4": 1,
+        "5": 53,
+        "7": 1
+      }
+    },
+    {
+      "chain_slack": "11/3640",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 3,
+      "weight_profile": {
+        "4": 1,
+        "5": 53,
+        "6": 1
+      }
+    },
+    {
+      "chain_slack": "1/140",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 8,
+      "weight_profile": {
+        "4": 1,
+        "5": 54
+      }
+    },
+    {
+      "chain_slack": "1/910",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 1,
+      "weight_profile": {
+        "3": 1,
+        "5": 47,
+        "7": 7
+      }
+    },
+    {
+      "chain_slack": "9/3640",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 3,
+      "weight_profile": {
+        "3": 1,
+        "5": 48,
+        "7": 6
+      }
+    },
+    {
+      "chain_slack": "1/260",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 4,
+      "weight_profile": {
+        "3": 1,
+        "5": 49,
+        "7": 5
+      }
+    },
+    {
+      "chain_slack": "1/910",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 1,
+      "weight_profile": {
+        "3": 1,
+        "5": 49,
+        "6": 1,
+        "7": 4
+      }
+    },
+    {
+      "chain_slack": "19/3640",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 6,
+      "weight_profile": {
+        "3": 1,
+        "5": 50,
+        "7": 4
+      }
+    },
+    {
+      "chain_slack": "9/3640",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 3,
+      "weight_profile": {
+        "3": 1,
+        "5": 50,
+        "6": 1,
+        "7": 3
+      }
+    },
+    {
+      "chain_slack": "1/5460",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 0,
+      "weight_profile": {
+        "3": 1,
+        "5": 51,
+        "7": 2,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "3/455",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 8,
+      "weight_profile": {
+        "3": 1,
+        "5": 51,
+        "7": 3
+      }
+    },
+    {
+      "chain_slack": "1/260",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 4,
+      "weight_profile": {
+        "3": 1,
+        "5": 51,
+        "6": 1,
+        "7": 2
+      }
+    },
+    {
+      "chain_slack": "1/910",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 1,
+      "weight_profile": {
+        "3": 1,
+        "5": 51,
+        "6": 2,
+        "7": 1
+      }
+    },
+    {
+      "chain_slack": "17/10920",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 1,
+      "weight_profile": {
+        "3": 1,
+        "5": 52,
+        "7": 1,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "29/3640",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 9,
+      "weight_profile": {
+        "3": 1,
+        "5": 52,
+        "7": 2
+      }
+    },
+    {
+      "chain_slack": "19/3640",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 6,
+      "weight_profile": {
+        "3": 1,
+        "5": 52,
+        "6": 1,
+        "7": 1
+      }
+    },
+    {
+      "chain_slack": "9/3640",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 3,
+      "weight_profile": {
+        "3": 1,
+        "5": 52,
+        "6": 2
+      }
+    },
+    {
+      "chain_slack": "4/1365",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 3,
+      "weight_profile": {
+        "3": 1,
+        "5": 53,
+        "8": 1
+      }
+    },
+    {
+      "chain_slack": "17/1820",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 11,
+      "weight_profile": {
+        "3": 1,
+        "5": 53,
+        "7": 1
+      }
+    },
+    {
+      "chain_slack": "3/455",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 1,
+      "q7_max_if_all_slack_used_there": 8,
+      "weight_profile": {
+        "3": 1,
+        "5": 53,
+        "6": 1
+      }
+    },
+    {
+      "chain_slack": "3/280",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 2,
+      "q7_max_if_all_slack_used_there": 13,
+      "weight_profile": {
+        "3": 1,
+        "5": 54
+      }
+    },
+    {
+      "chain_slack": "0",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 0,
+      "weight_profile": {
+        "3": 1,
+        "4": 1,
+        "5": 53
+      }
+    },
+    {
+      "chain_slack": "3/3640",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 1,
+      "weight_profile": {
+        "3": 2,
+        "5": 51,
+        "7": 2
+      }
+    },
+    {
+      "chain_slack": "1/455",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 2,
+      "weight_profile": {
+        "3": 2,
+        "5": 52,
+        "7": 1
+      }
+    },
+    {
+      "chain_slack": "1/280",
+      "eliminated": true,
+      "jointly_feasible_allocations": [],
+      "q5_max_if_all_slack_used_there": 0,
+      "q7_max_if_all_slack_used_there": 4,
+      "weight_profile": {
+        "3": 2,
+        "5": 53
+      }
+    }
+  ],
+  "m55_surviving_profiles": [],
+  "proved": true,
+  "proves_no_55_member_family": true,
+  "proves_no_56_member_family": true,
+  "raw_chain_upper": 56,
+  "rho_by_weight": {
+    "1": "1/16",
+    "10": "6/143",
+    "11": "3/52",
+    "12": "6/65",
+    "13": "3/20",
+    "14": "4/15",
+    "15": "1/2",
+    "16": "1",
+    "2": "1/15",
+    "3": "1/40",
+    "4": "1/35",
+    "5": "1/56",
+    "6": "2/91",
+    "7": "1/52",
+    "8": "1/39",
+    "9": "3/104"
+  },
+  "unique_chain_minimizing_weight": [
+    5
+  ],
+  "weight5_triple_packing_upper": 48
+}

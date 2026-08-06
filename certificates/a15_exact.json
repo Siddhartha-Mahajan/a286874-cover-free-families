@@ -1,0 +1,224 @@
+{
+  "claim": "A286874(15)=42",
+  "classification": {
+    "all_weight3_extremals": 787,
+    "all_weight5_extremals": 1,
+    "complementary_row_splits": [],
+    "invalid_family_indices": [],
+    "parsed_families": 788,
+    "path": "sources/a14_extremals_A303977.txt",
+    "profile_histogram": {
+      "(((3, 28),), ((6, 14),))": 787,
+      "(((5, 28),), ((10, 14),))": 1
+    },
+    "proves_minimum_weight_3_branch_impossible": true,
+    "sha256": "22c962481d737737ab1f25c88e7cfec1f24c9f5e4bb5caee8450956bd80b79c4"
+  },
+  "delta5_nonprivate_triple": "1/182",
+  "delta7_nonprivate_four_subset": "2/2145",
+  "final_profile_eliminations": [
+    {
+      "available_triples": 175,
+      "chain_slack": "0",
+      "eliminated": true,
+      "q5_max": 0,
+      "q7_max": 0,
+      "weight7_triple_union_lower": 420,
+      "weight_profile": {
+        "5": 28,
+        "7": 15
+      }
+    },
+    {
+      "available_triples": 165,
+      "chain_slack": "1/273",
+      "eliminated": true,
+      "q5_max": 0,
+      "q7_max": 3,
+      "weight7_triple_union_lower": 390,
+      "weight_profile": {
+        "5": 29,
+        "7": 14
+      }
+    },
+    {
+      "available_triples": 165,
+      "chain_slack": "1/546",
+      "eliminated": true,
+      "q5_max": 0,
+      "q7_max": 1,
+      "weight7_triple_union_lower": 377,
+      "weight_profile": {
+        "5": 29,
+        "6": 1,
+        "7": 13
+      }
+    },
+    {
+      "available_triples": 165,
+      "chain_slack": "0",
+      "eliminated": true,
+      "q5_max": 0,
+      "q7_max": 0,
+      "weight7_triple_union_lower": 354,
+      "weight_profile": {
+        "5": 29,
+        "6": 2,
+        "7": 12
+      }
+    },
+    {
+      "available_triples": 156,
+      "chain_slack": "2/273",
+      "eliminated": true,
+      "q5_max": 1,
+      "q7_max": 7,
+      "weight7_triple_union_lower": 314,
+      "weight_profile": {
+        "5": 30,
+        "7": 13
+      }
+    },
+    {
+      "available_triples": 156,
+      "chain_slack": "1/182",
+      "eliminated": true,
+      "q5_max": 1,
+      "q7_max": 5,
+      "weight7_triple_union_lower": 324,
+      "weight_profile": {
+        "5": 30,
+        "6": 1,
+        "7": 12
+      }
+    },
+    {
+      "available_triples": 145,
+      "chain_slack": "5/3003",
+      "eliminated": true,
+      "q5_max": 0,
+      "q7_max": 1,
+      "weight7_triple_union_lower": 330,
+      "weight_profile": {
+        "5": 31,
+        "7": 11,
+        "8": 1
+      }
+    }
+  ],
+  "lower_witness": {
+    "claimed": 42,
+    "counterexample": null,
+    "distinct": 42,
+    "n": 15,
+    "pair_intersection_histogram": {
+      "0": 126,
+      "1": 105,
+      "2": 630
+    },
+    "parsed": 42,
+    "path": "constructions/a15_42.txt",
+    "valid": true,
+    "weight_histogram": {
+      "5": 42
+    }
+  },
+  "m43_degree15_obstruction": {
+    "branch_calls": 4827,
+    "candidate_residual_words": 98,
+    "compatibility_edges": 2051,
+    "maximum_clique_words_hex": [
+      "0246",
+      "042a",
+      "0514",
+      "0681",
+      "0825",
+      "09c0",
+      "0a18",
+      "1049",
+      "1092",
+      "1320",
+      "2070",
+      "208c",
+      "2103",
+      "3c00"
+    ],
+    "proves_every_row_degree_at_least_16": true,
+    "relaxed_clique_number": 14,
+    "required_clique_size": 15
+  },
+  "m43_profile_enumeration": {
+    "global_chain_feasible_profile_count": 495,
+    "profiles_after_incidence_at_least_240": [
+      {
+        "5": 28,
+        "7": 15
+      },
+      {
+        "5": 29,
+        "7": 14
+      },
+      {
+        "5": 29,
+        "6": 1,
+        "7": 13
+      },
+      {
+        "5": 29,
+        "6": 2,
+        "7": 12
+      },
+      {
+        "5": 30,
+        "7": 13
+      },
+      {
+        "5": 30,
+        "6": 1,
+        "7": 12
+      },
+      {
+        "5": 31,
+        "7": 11,
+        "8": 1
+      }
+    ],
+    "weights_possible": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "m44_incidence_obstruction": {
+    "affine_inequality": "w <= 546*rho(15,w)-7",
+    "chain_incidence_upper": 238,
+    "contradiction": true,
+    "equality_weights": [
+      5,
+      7
+    ],
+    "row_deletion_incidence_lower": 240,
+    "slack_by_weight": {
+      "1": "142/5",
+      "10": "191/11",
+      "11": "162/5",
+      "12": "65",
+      "13": "628/5",
+      "14": "252",
+      "15": "524",
+      "2": "30",
+      "3": "28/5",
+      "4": "7",
+      "5": "0",
+      "6": "2",
+      "7": "0",
+      "8": "45/11",
+      "9": "76/11"
+    }
+  },
+  "proved": true
+}

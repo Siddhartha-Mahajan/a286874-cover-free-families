@@ -1,0 +1,513 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{fancyvrb}
+\usepackage[T1]{fontenc}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\binomc}[2]{\binom{#1}{#2}}
+\newcommand{\F}{\mathcal F}
+
+\title{Two Exact Values and a New Upper Bound\\
+for Binary 2-Cover-Free Families}
+\author{Siddhartha Mahajan}
+\date{August 2026}
+
+\begin{document}
+\setlength{\emergencystretch}{1.5em}
+\maketitle
+
+\begin{abstract}
+Let $a(n)$ be the largest size of a family of subsets of an $n$-set in
+which no member is contained in the union of two other distinct members;
+equivalently, $a(n)$ is the maximum number of columns in an $n$-row binary
+2-disjunct matrix.  This is OEIS A286874.  We prove
+\[
+ a(15)=42,\qquad 48\leq a(16)\leq54,\qquad a(17)=68.
+\]
+The common upper-bound tool is a mixed-weight private-subset inequality on
+random maximal chains.  At $n=17$ it matches the 68 blocks of an
+$S(3,5,17)$.  At $n=15$ it is combined with hereditary row cells, the
+complete classification of the 28-member extremal families on 14 points,
+and finite profile and compatibility-graph certificates.  At $n=16$, an
+exact enumeration of 97 chain-feasible profiles is eliminated by sharing the
+chain slack between a weight-5 packing obstruction and a weight-7
+triple-union obstruction.  A standard-library-only reproducibility archive
+contains all constructions, input data, scripts and machine-readable
+certificates.
+\end{abstract}
+
+\section{Introduction}
+
+A family $\F\subseteq 2^{[n]}$ is \emph{2-cover-free} if for every three
+distinct $A,B,C\in\F$,
+\[
+ C\nsubseteq A\cup B.
+\]
+In matrix language, for every target column $C$ and distinct source columns
+$A,B$, some row has pattern $(C,A,B)=(1,0,0)$.  Such matrices are also called
+binary 2-disjunct matrices or superimposed codes; see Kautz and
+Singleton~\cite{kautz-singleton} and Erd\H{o}s, Frankl and
+F\"uredi~\cite{eff1982}.  The sequence of maxima is OEIS
+A286874~\cite{oeis-a286874}.
+
+The historical 28-vector lower-bound construction at $n=14$ was recorded by
+Dmitry Kamenetsky~\cite{kamenetsky-a286874}; Steinar H. Gunderson later proved
+exactness and supplied the complete classification~\cite{oeis-a303977}.  The
+previously recorded exact values therefore ended at $a(14)=28$, while
+Gunderson's
+Gunderson's OEIS attachment gave lower bounds $42,48,52$ at
+$n=15,16,17$~\cite{gunderson-a286874}.  The complete classification of the
+$a(14)$ extremals, also contributed by Gunderson as an attachment to OEIS
+A303977~\cite{oeis-a303977}, is used below as a finite input.  Our principal
+results are the following.
+
+\begin{theorem}\label{thm:main}
+The unrestricted binary 2-cover-free maxima satisfy
+\[
+ a(15)=42,\qquad 48\leq a(16)\leq54,\qquad a(17)=68.
+\]
+\end{theorem}
+
+The $S(3,5,17)$ lower construction is classical: it is the inversive plane of
+order four.  Inversive planes $S(3,q+1,q^2+1)$ exist for prime-power $q$;
+see Phelps~\cite{phelps1981}.  Zhu gave an explicit pair of orthogonal
+$S(3,5,17)$ systems~\cite{zhu1980}.  We found the particular 68-block list
+distributed here with a CP-SAT packing search seeded with Gunderson's
+52-block witness~\cite{gunderson-a286874}; it is checked
+independently at the incidence level, so neither the solver nor the seed is
+used in the proof of validity.
+
+\section{The private-chain inequality}
+
+For $F\in\F$, call $S\subseteq F$ \emph{private to $F$} if no other member
+of $\F$ contains $S$.
+
+\begin{lemma}\label{lem:private}
+For every $S\subseteq F$, at least one of $S$ and $F\setminus S$ is private
+to $F$.  Private subsets owned by different members are cross-incomparable.
+\end{lemma}
+
+\begin{proof}
+If neither side were private, some $G,H\in\F\setminus\{F\}$ would satisfy
+$S\subseteq G$ and $F\setminus S\subseteq H$, whence $F\subseteq G\cup H$.
+The two witnesses cannot coincide because a 2-cover-free family with at least
+three members is an antichain.  If $P$ is private to $F$, $Q$ is private to
+$G\neq F$, and $P\subseteq Q$, then $P\subseteq G$, a contradiction.
+\end{proof}
+
+Choose a uniformly random maximal chain of $2^{[n]}$, equivalently a random
+permutation of $[n]$.  If $|F|=w$, let $R_F$ be the elements of $F$ occurring
+before the first point outside $F$.  For fixed $S\subset F$, $|S|=s<w$,
+\[
+ \Pr(R_F=S)=\mu_{n,w}(s)
+ =\frac{n-w}{n-s}\binomc ns^{-1},
+\]
+and $\Pr(R_F=F)=\binomc nw^{-1}$.  The private subsets of $F$ form an upset,
+so the chain meets one exactly when $R_F$ is private.
+
+Pair every subset of $F$ with its complement in $F$.  At least one side is
+private by Lemma~\ref{lem:private}, and the larger side has the smaller
+$\mu$-mass.  Define
+\begin{align*}
+ \rho(n,2t-1)
+ &=\sum_{s=t}^{2t-1}\binomc{2t-1}s\mu_{n,2t-1}(s),\\
+ \rho(n,2t)
+ &=\frac12\binomc{2t}t\mu_{n,2t}(t)
+   +\sum_{s=t+1}^{2t}\binomc{2t}s\mu_{n,2t}(s).
+\end{align*}
+
+\begin{theorem}[Mixed-weight private-chain bound]\label{thm:chain}
+Every 2-cover-free family with at least three members satisfies
+\[
+ \sum_{F\in\F}\rho(n,|F|)\leq1.
+\]
+\end{theorem}
+
+\begin{proof}
+For each $F$, the preceding complementary-pair argument lower-bounds the
+probability that the random chain meets a private subset owned by $F$ by
+$\rho(n,|F|)$.  By Lemma~\ref{lem:private}, a totally ordered chain cannot
+meet private subsets owned by two different members.  The events are
+therefore disjoint.
+\end{proof}
+
+All values of $\mu$ and $\rho$ used below are evaluated as reduced rational
+numbers by \path{scripts/common.py}.
+
+\section{The exact value at 17}
+
+At $n=17$, direct evaluation gives
+\[
+ \min_{1\leq w\leq17}\rho(17,w)=\frac1{68},
+\]
+with equality only at $w=5,7$.  Theorem~\ref{thm:chain} therefore gives
+$a(17)\leq68$ for arbitrary mixed weights.
+
+The file \texttt{constructions/a17\_68.txt} contains 68 weight-5 blocks found
+as described above.
+The replay verifies that distinct blocks meet in at most two points and that
+their $68\binomc53=680=\binomc{17}3$ triples are all distinct.  Hence they
+form an $S(3,5,17)$ and are 2-cover-free: a third 5-block has at most four
+points in the union of any two others.  Thus $a(17)=68$.
+
+\section{The exact value at 15}
+
+Gunderson's construction in
+\texttt{constructions/a15\_42.txt}~\cite{gunderson-a286874} proves
+$a(15)\geq42$.
+We exclude 44 and then 43 members.
+
+\subsection{An incidence obstruction at 44}
+
+The following fifteen rational inequalities are checked directly:
+\[
+ w\leq546\rho(15,w)-7\qquad(1\leq w\leq15),
+\]
+with equality only at $w=5,7$.  If $m=|\F|$ and
+$I=\sum_{F\in\F}|F|$, Theorem~\ref{thm:chain} gives
+\begin{equation}\label{eq:inc-upper}
+ I\leq546-7m.
+\end{equation}
+The members zero on any fixed row, after deleting that row, form a
+2-cover-free family on 14 rows and hence number at most $a(14)=28$.
+Every row has degree at least $m-28$, so
+\begin{equation}\label{eq:inc-lower}
+ I\geq15(m-28).
+\end{equation}
+At $m=44$, these give $I\leq238$ and $I\geq240$.  Therefore $a(15)\leq43$.
+
+\subsection{The minimum-weight-3 branch}
+
+Assume a 43-member family has a minimum member $C$ of size three.  The
+nonempty zero traces $C\setminus B$, over the other 42 members $B$, are
+pairwise intersecting.  No coordinate of $C$ occurs in more than 28 traces.
+A singleton trace would force all 42 traces through one point, so every trace
+has size at least two.  The trace-incidence total is consequently at least
+$84$ and at most $3\cdot28=84$.  Equality forces fourteen copies of each
+2-subset of $C$.
+
+The union of any two resulting 14-member trace classes has a constant-zero
+support row.  Deleting it produces an extremal 28-member family on 14 rows
+with two complementary coordinate rows.  Gunderson's complete A303977
+input~\cite{oeis-a303977} contains 788 extremal classes.  The replay verifies
+every class against the cover-free
+definition and finds no complementary row pair.  Thus minimum weight three is
+impossible.
+
+\subsection{The degree-15 row and the seven profiles}
+
+Now all members have weight at least four.  Equation~\eqref{eq:inc-lower}
+gives row degree at least 15.  If a row had degree 15, its 28-member zero-cell
+would be an extremal family on 14 rows.  The verified classification consists
+of 787 all-weight-3 families and one all-weight-5 family, so the zero-cell
+must be the unique weight-5 extremal.
+
+Fix that extremal and exhaust the $2^{14}$ residual words for each of the 15
+one-cell members.  After all conditions involving the fixed family and at
+most two candidate members are imposed, 98 candidates remain.  Their exact
+compatibility graph has clique number 14.  This graph omits constraints among
+three candidate members, so it is a relaxation; the required 15-clique cannot
+exist.  Every row therefore has degree at least 16, and $I\geq240$.
+
+Exact integer enumeration of the global chain budget, minimum weight four,
+43 members and $I\geq240$ leaves precisely the seven profiles
+\[
+ 5^{28}7^{15},\ 5^{29}7^{14},\ 5^{29}6^17^{13},\
+ 5^{29}6^27^{12},\ 5^{30}7^{13},\ 5^{30}6^17^{12},\
+ 5^{31}7^{11}8^1.
+\]
+
+For a weight-5 member, a nonprivate triple costs
+\[
+ \delta_5=\mu_{15,5}(2)-\mu_{15,5}(3)=\frac1{182}
+\]
+above its minimum chain mass.  For a weight-7 member, a nonprivate 4-subset
+costs
+\[
+ \delta_7=\mu_{15,7}(3)-\mu_{15,7}(4)=\frac2{2145}.
+\]
+If the profile slack permits at most $q_5,q_7$ such incidences, then at least
+$10b_5-q_5$ triples are private to the $b_5$ weight-5 members and occur in no
+weight-7 member.
+
+Let $r_Q$ be the number of weight-7 members through a 4-set $Q$.  Incidences
+with $r_Q\geq2$ are nonprivate, giving
+$\sum_Q\binomc{r_Q}2\leq\binomc{q_7}2$.  Since
+$\binomc r3\leq1+3\binomc r4$ for $0\leq r\leq7$, two-term
+inclusion--exclusion lower-bounds the union of the triples in the weight-7
+members by
+\begin{equation}\label{eq:tripleunion}
+ 35b_7-\binomc{b_7}2-3\binomc{q_7}2.
+\end{equation}
+For the seven profiles, these lower bounds are
+\[
+420,390,377,354,314,324,330,
+\]
+while the numbers of triples available outside the private weight-5 triples
+are only
+\[
+175,165,165,165,156,156,145.
+\]
+All cases are impossible, proving $a(15)=42$.
+
+\section{The new upper bound at 16}
+
+Gunderson's file \texttt{constructions/a16\_48.txt}~\cite{gunderson-a286874}
+gives $a(16)\geq48$.  The unique
+minimum chain mass at $n=16$ is $\rho(16,5)=1/56$.  Equality with 56 members
+would force all members to be 5-sets with all triples private, hence an
+$S(3,5,16)$.  Its point replication number would be
+\[
+ \frac{\binomc{15}2}{\binomc42}=\frac{35}{2},
+\]
+which is impossible.  Thus $a(16)\leq55$.
+
+At 55 members, exact enumeration of the chain budget leaves 97 integer weight
+profiles, supported on weights 3 through 9.  A 5-uniform family whose triples
+are private is a $3$-$(16,5,\leq1)$ packing.  Through each point there are at
+most
+\[
+ \left\lfloor\frac{15}{4}
+ \left\lfloor\frac{14}{3}\right\rfloor\right\rfloor=15
+\]
+blocks, so it contains at most $16\cdot15/5=48$ blocks.  If $q_5$
+weight-5 triple incidences are nonprivate, deleting at most $q_5$ affected
+blocks gives the necessary condition $b_5-q_5\leq48$.  Here
+\[
+ \delta_5=\mu_{16,5}(2)-\mu_{16,5}(3)=\frac{11}{2184}.
+\]
+For weight-7 members, equation~\eqref{eq:tripleunion} applies with
+\[
+ \delta_7=\mu_{16,7}(3)-\mu_{16,7}(4)=\frac3{3640}.
+\]
+The weight-7 triple union must fit among
+$\binomc{16}3-(10b_5-q_5)$ triples.  Crucially, both defect counts spend the
+same profile slack:
+\[
+ q_5\frac{11}{2184}+q_7\frac3{3640}\leq\text{slack}.
+\]
+Every integer pair $(q_5,q_7)$ for every one of the 97 profiles is checked in
+\path{scripts/certify_a16_upper.py}; none meets all three necessary
+conditions.  Therefore $a(16)\leq54$, proving
+\[
+ 48\leq a(16)\leq54.
+\]
+
+\section{Reproducibility}
+
+The archive contains the three construction witnesses, the complete A303977
+classification input, standard-library Python certifiers, deterministic JSON
+outputs, and SHA-256 hashes.  Running
+\begin{verbatim}
+python3 scripts/replay_all.py
+\end{verbatim}
+from the repository root verifies the following independently:
+\begin{itemize}
+ \item every construction against the original OR-containment definition;
+ \item all 788 classified $a(14)$ extremals and the absence of complementary
+       rows;
+ \item the 98-vertex graph and clique number 14;
+ \item the seven final $n=15$ profiles and their exact rational slacks;
+ \item all 97 $n=16,m=55$ profiles and every joint defect allocation;
+ \item all mixed-weight chain masses used at $n=15,16,17$.
+\end{itemize}
+No floating-point optimization, external solver or timeout is used in a final
+claim.  The role and provenance of every file are described in
+\texttt{SUPPORTING\_FILES.md}.
+
+\appendix
+
+\section{Complete ancillary-file inventory}\label{app:files}
+
+This appendix records every file that supplies a construction, enters an
+upper-bound reduction, records its output, or allows the result to be replayed.
+Paths are relative to the repository root.
+
+\subsection{Mathematical input and witnesses}
+
+\begin{description}
+ \item[\path{sources/a14_extremals_A303977.txt}.]
+ The sole external finite-classification input.  It contains all 788
+ equivalence classes of 28-member extremal families on 14 points from OEIS
+ A303977.  The attachment and the $a(14)$ classification were contributed by
+ Steinar H. Gunderson~\cite{oeis-a303977}; A303977 itself was created by Zhao
+ Hui Du.  Kamenetsky's earlier A286874 attachment contains the historical
+ 28-vector lower-bound construction~\cite{kamenetsky-a286874}.  The file is
+ used twice in the $n=15$ upper bound: to exclude the
+ minimum-weight-3 trace branch by checking that no class has complementary
+ rows, and to identify the single weight-5 class used in the degree-15-row
+ branch.  The replay parses and directly verifies every class before using
+ either fact.  Its provenance and original SHA-256 hash are recorded in
+ \path{sources/README.md}.
+
+ \item[\path{constructions/a15_42.txt}.]
+ Steinar H. Gunderson's 42-column witness~\cite{gunderson-a286874}, proving
+ $a(15)\geq42$.  It is reproduced verbatim in Appendix~\ref{app:c15} and
+ checked directly against the defining ordered triples of columns.
+
+ \item[\path{constructions/a16_48.txt}.]
+ Steinar H. Gunderson's 48-column witness~\cite{gunderson-a286874}, proving
+ $a(16)\geq48$.  It is reproduced verbatim in Appendix~\ref{app:c16} and
+ checked directly against the definition.
+
+ \item[\path{constructions/a17_68.txt}.]
+ The 68-column witness proving $a(17)\geq68$.  We found this particular list
+ using a CP-SAT search seeded with Gunderson's 52-column
+ witness~\cite{gunderson-a286874}.  Classical
+ existence is due to the inversive-plane construction~\cite{phelps1981}, and
+ an explicit pair was published by Zhu~\cite{zhu1980}.  The list is reproduced
+ verbatim in Appendix~\ref{app:c17}.  Besides the direct cover-free check, the replay
+ verifies weight five, pairwise intersection at most two, and exact coverage
+ of all 680 triples, certifying that it is an $S(3,5,17)$.
+\end{description}
+
+\subsection{Executable reductions}
+
+\begin{description}
+ \item[\path{scripts/common.py}.]
+ Shared exact-arithmetic implementation.  It defines the reduced rational
+ functions $\mu$ and $\rho$, construction parsers, the direct cover-free
+ predicate, profile generation, and hashing helpers.  All certifiers import
+ this file.
+
+ \item[\path{scripts/certify_a15_exact.py}.]
+ Complete executable upper-bound reduction for $n=15$.  It verifies the 42
+ witness and all 788 classified $n=14$ families; checks the affine
+ incidence obstruction at 44 members; excludes the minimum-weight-3 branch;
+ reconstructs the 98-vertex degree-15 compatibility relaxation and proves
+ clique number 14; enumerates the seven surviving 43-member profiles; and
+ checks each triple-union contradiction using exact rational slack.
+
+ \item[\path{scripts/certify_a16_upper.py}.]
+ Complete executable proof that a 55-member family on 16 points cannot exist.
+ It checks the 48 witness, the $S(3,5,16)$ replication obstruction at 56,
+ enumerates all 97 chain-feasible profiles at 55, and exhausts every shared
+ weight-5/weight-7 defect allocation allowed by the exact chain slack.
+
+ \item[\path{scripts/certify_a17_exact.py}.]
+ Complete executable verification of the $n=17$ construction and upper bound.
+ It checks the $S(3,5,17)$ incidence properties, direct cover-freeness, and
+ $\rho(17,w)\geq1/68$ for all $1\leq w\leq17$.
+
+ \item[\path{scripts/replay_all.py}.]
+ The public replay entry point.  It invokes all three certifiers, checks their
+ terminal assertions, and writes the aggregate summary.  Running this file is
+ sufficient to reproduce every computational assertion in the paper.
+
+ \item[\path{scripts/build_sha256s.py}.]
+ Integrity utility rather than a mathematical assumption.  It deterministically
+ hashes every distributed file except the hash list itself.
+\end{description}
+
+\subsection{Historical construction-discovery files}
+
+These files record how the particular labeled $n=17$ witness was found.  They
+are not inputs to the lower-bound verification or to any upper-bound proof.
+
+\begin{description}
+ \item[\path{discovery/search_constant_weight.py}.]
+ The CP-SAT packing-search program used to find the 68-block witness.  It
+ selects weight-5 subsets subject to the condition that every triple occurs
+ in at most one selected block.  The program requires OR-Tools and parallel
+ search need not reproduce the same labeled solution.  Its saved result is
+ therefore verified independently rather than trusted.
+
+ \item[\path{discovery/a17_seed_52.txt}.]
+ Gunderson's 52-vector OEIS witness~\cite{gunderson-a286874}, used as the
+ initial CP-SAT hint.  The search first found 55 blocks and then, using that
+ improvement as a new hint, found 68.  The overwritten intermediate 55-block
+ file is not used in any final argument.
+
+ \item[\path{discovery/README.md}.]
+ Records the two-stage search history, dependency boundary, a representative
+ command, and the fact that discovery replay is optional.  The standard-library
+ certifier, not CP-SAT, establishes the validity and Steiner property of the
+ saved construction.
+\end{description}
+
+\subsection{Machine-readable certificates and audit documents}
+
+\begin{description}
+ \item[\path{certificates/a15_exact.json}.]
+ Deterministic record of the $n=15$ replay, including classification counts,
+ graph order and clique number, seven profiles, rational slacks, defect
+ budgets, and final inequalities.
+
+ \item[\path{certificates/a16_upper_54.json}.]
+ Deterministic complete table of the 97 profiles at $n=16,m=55$, together
+ with the exact failure of every admissible joint defect allocation.
+
+ \item[\path{certificates/a17_exact.json}.]
+ Deterministic record of the construction incidence checks and all 17 private
+ chain masses used for $n=17$.
+
+ \item[\path{certificates/replay_summary.json}.]
+ Aggregate pass/fail record written only after all three individual
+ certificates succeed.
+
+ \item[\path{SUPPORTING_FILES.md}.]
+ Short claim-to-file map for reviewers.  It adds no mathematical assumption.
+
+ \item[\path{docs/PROOF.md}.]
+ Expanded prose version of the proof and certificate reductions.  It adds no
+ input beyond the theorem statements and files enumerated here.
+
+ \item[\path{docs/REPRODUCE.md}.]
+ Exact commands and requirements for an independent replay.
+
+ \item[\path{sources/README.md}.]
+ Provenance and fixed hashes for the A303977 input and three witnesses.
+
+ \item[\path{SHA256SUMS}.]
+ Hash manifest for the complete repository snapshot.  It detects accidental
+ changes but is not assumed in any mathematical inference.
+\end{description}
+
+The remaining files supply only navigation, citation, licensing and build
+metadata: \path{README.md}, \path{CITATION.cff}, \path{LICENSE.md},
+\path{Makefile}, \path{.gitignore}, and the manuscript source, PDF and
+bibliography.  They are not hidden mathematical inputs.  Thus the inventory
+above accounts for every file used to obtain a construction or tighten an
+upper bound, as well as every derived certificate used to audit those steps.
+
+\clearpage
+\section{Exact 42-member construction at $n=15$}\label{app:c15}
+
+Each line after the heading is one length-15 binary vector.  The list below is
+included verbatim from \path{constructions/a15_42.txt}.  Construction credit:
+Steinar H. Gunderson~\cite{gunderson-a286874}.
+
+\VerbatimInput[fontsize=\small]{../constructions/a15_42.txt}
+
+\clearpage
+\section{Exact 48-member construction at $n=16$}\label{app:c16}
+
+Each line after the heading is one length-16 binary vector.  The list below is
+included verbatim from \path{constructions/a16_48.txt}.  Construction credit:
+Steinar H. Gunderson~\cite{gunderson-a286874}.
+
+\VerbatimInput[fontsize=\small]{../constructions/a16_48.txt}
+
+\clearpage
+\section{Exact 68-member construction at $n=17$}\label{app:c17}
+
+Each line after the heading is one length-17 binary vector.  The list below is
+included verbatim from \path{constructions/a17_68.txt}.  These are the 68
+blocks of the verified $S(3,5,17)$ used in the lower bound.  This particular
+list was found as described in Appendix~\ref{app:files}; the search was seeded
+with Gunderson's 52-block
+witness~\cite{gunderson-a286874}, while Phelps and Zhu supply the classical
+design references~\cite{phelps1981,zhu1980}.
+
+\VerbatimInput[fontsize=\small]{../constructions/a17_68.txt}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

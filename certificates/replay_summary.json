@@ -1,0 +1,23 @@
+{
+  "all_certificates_passed": true,
+  "certificate_files": [
+    "certificates/a15_exact.json",
+    "certificates/a16_upper_54.json",
+    "certificates/a17_exact.json"
+  ],
+  "immutable_input_sha256": {
+    "constructions/a15_42.txt": "eeaaca0d7e5f63c402fbd42ae5ab3583340e4633022a689f3b499681b7ada371",
+    "constructions/a16_48.txt": "3e91ef56158a572d7e4793deb8f7a4cb2acd38e6c32f62d0b5cda981e146060b",
+    "constructions/a17_68.txt": "d7bf1d38e429f600b8bee5edd7dd082e732b5516a08afc045a7cfabccc2ca9c3",
+    "sources/a14_extremals_A303977.txt": "22c962481d737737ab1f25c88e7cfec1f24c9f5e4bb5caee8450956bd80b79c4"
+  },
+  "package_claims": {
+    "A286874(15)": 42,
+    "A286874(16)": {
+      "lower": 48,
+      "upper": 54
+    },
+    "A286874(17)": 68
+  },
+  "runtime_dependency": "Python standard library only"
+}
