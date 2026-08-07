@@ -47,7 +47,50 @@ sum_{F in family} rho(n,|F|) <= 1.                 (1)
 
 `scripts/common.py` evaluates `mu` and `rho` with exact rational arithmetic.
 
-## 3. Exact value `a(17)=68`
+## 3. Closed form and the all-dimensions bound
+
+For `s<w`, cancellation gives
+
+```text
+C(w,s)*mu(n,w,s) = C(n-s-1,w-s)/C(n,w).
+```
+
+The hockey-stick identity then evaluates the two chain masses as
+
+```text
+rho(n,2t-1) = C(n-t,t-1)/C(n,2t-1)
+             = C(2t-1,t)/C(n,t),
+
+rho(n,2t)   = n*C(n-t-1,t-1)/(2t*C(n,2t)).
+```
+
+Their decisive ratios are
+
+```text
+rho(n,2t)/rho(n,2t-1)   = n/(n-t) > 1,
+rho(n,2t+1)/rho(n,2t-1) = 2*(2t+1)/(n-t).
+```
+
+Thus an even weight never minimizes.  The odd-weight masses decrease while
+`5t<n-2`, increase while `5t>n-2`, and tie when `5t=n-2`.  For
+
+```text
+t = ceiling((n-2)/5),
+```
+
+the minimum is therefore at weight `2t-1`, with an additional minimizing
+weight `2t+1` exactly when `n=2 (mod 5)`.  Substitution in (1) proves, for
+every `n>=3`,
+
+```text
+a(n) <= floor(C(n,t)/C(2t-1,t)).
+```
+
+Stirling's formula shows that the right side is `Theta((5/4)^n)`.
+`scripts/certify_chain_formula.py` checks the closed forms and minimizers
+through `n=250` using exact rational arithmetic.
+
+## 4. Exact value `a(17)=68`
 
 At `n=17`, the minimum of `rho(17,w)` over all weights is `1/68`, attained
 only at weights 5 and 7.  Equation (1) gives `|F|<=68` for arbitrary mixed
@@ -70,13 +113,13 @@ a(17)=68.
 The exact arithmetic and witness verification are in
 `certificates/a17_exact.json`.
 
-## 4. Exact value `a(15)=42`
+## 5. Exact value `a(15)=42`
 
-### 4.1 Lower bound
+### 5.1 Lower bound
 
 The 42 words in `constructions/a15_42.txt` pass the complete cover-free test.
 
-### 4.2 Excluding 44 members
+### 5.2 Excluding 44 members
 
 For every weight `1<=w<=15`, direct rational evaluation gives
 
@@ -101,7 +144,7 @@ I >= 15(m-28).                                     (4)
 
 At `m=44`, (3) gives `I<=238` while (4) gives `I>=240`.  Thus `a(15)<=43`.
 
-### 4.3 Excluding minimum weight 3 at 43 members
+### 5.3 Excluding minimum weight 3 at 43 members
 
 Suppose a minimum member `C` has size 3.  For each of the other 42 members,
 take its nonempty zero trace on `C`.  These traces are pairwise intersecting;
@@ -120,7 +163,7 @@ support rows are complementary.  The file
 The replay verifies every family directly and finds no complementary row pair.
 Therefore minimum weight 3 is impossible.
 
-### 4.4 Excluding a degree-15 row
+### 5.4 Excluding a degree-15 row
 
 Now every member has weight at least 4.  Equation (4) says every row has
 degree at least 15.  If one row had degree 15, its 28-member zero-cell would be
@@ -143,7 +186,7 @@ Therefore degree 15 is impossible, every row has degree at least 16, and
 I >= 15*16 = 240.                                  (5)
 ```
 
-### 4.5 The seven remaining profiles
+### 5.5 The seven remaining profiles
 
 Enumerating all integer weight profiles satisfying (1), minimum weight at
 least 4, 43 total members and (5) leaves exactly
@@ -211,7 +254,7 @@ a(15)=42.
 
 The complete replay record is `certificates/a15_exact.json`.
 
-## 5. New upper bound `a(16)<=54`
+## 6. New upper bound `a(16)<=54`
 
 The witness `constructions/a16_48.txt` proves `a(16)>=48`.
 

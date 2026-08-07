@@ -1,4 +1,4 @@
-# Exact values and upper bounds for A286874
+# Exact values and an all-dimensions upper bound for A286874
 
 Reproducible research package by **Siddhartha Mahajan** for the binary
 2-cover-free-family sequence [OEIS A286874](https://oeis.org/A286874).
@@ -11,9 +11,16 @@ A286874(15) = 42,
 A286874(17) = 68.
 ```
 
+It also proves the explicit universal bound
+
+```text
+For n>=3 and t=ceiling((n-2)/5),
+A286874(n) <= floor(C(n,t)/C(2t-1,t)).
+```
+
 The `n=15` and `n=17` statements are exact evaluations.  The `n=16`
 statement improves the unrestricted upper bound; no exact value at `n=16` is
-claimed.  The same all-dimensions chain theorem additionally gives
+claimed.  The all-dimensions formula gives, in particular,
 `a(18)<=87`, `a(19)<=110`, `a(20)<=138`, `a(21)<=171`, and `a(22)<=209`;
 these are stated as consequences of this method, not as a claim about the
 best bounds from all sources.
@@ -29,14 +36,17 @@ python3 scripts/replay_all.py
 Expected output:
 
 ```text
+certified the closed private-chain formula through n=250
 certified A286874(15)=42
 certified 48 <= A286874(16) <= 54
 certified A286874(17)=68
 all final A286874 certificates passed
 ```
 
-The replay verifies all construction vectors against the original bitwise-OR
-definition, checks every one of the 788 classified extremal `a(14)` families,
+The replay compares the defining chain sums with the closed formula at every
+weight through `n=250`, verifies all construction vectors against the original
+bitwise-OR definition, checks every one of the 788 classified extremal
+`a(14)` families,
 reconstructs the 98-vertex compatibility graph used at `n=15`, exhausts the
 seven final `n=15` profiles, and eliminates all 97 chain-feasible
 55-member profiles at `n=16`.  All arithmetic is exact.

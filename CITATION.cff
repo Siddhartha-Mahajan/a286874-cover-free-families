@@ -1,15 +1,16 @@
 cff-version: 1.2.0
 message: "If you use this proof package, please cite it as below."
-title: "Exact values and upper bounds for binary 2-cover-free families (A286874)"
+title: "Exact values and an all-dimensions upper bound for binary 2-cover-free families (A286874)"
 type: software
 authors:
   - family-names: Mahajan
     given-names: Siddhartha
 version: 1.0.0
-date-released: 2026-08-06
+date-released: 2026-08-07
 abstract: >-
   Exact certificates for A286874(15)=42 and A286874(17)=68, together with
-  the unrestricted bound 48 <= A286874(16) <= 54.
+  the unrestricted bound 48 <= A286874(16) <= 54 and an explicit universal
+  private-chain upper bound for every n >= 3.
 keywords:
   - cover-free families
   - disjunct matrices

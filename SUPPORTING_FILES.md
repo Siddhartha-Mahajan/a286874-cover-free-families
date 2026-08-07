@@ -7,6 +7,25 @@
 contains the direct cover-free verifier used for every construction and every
 classified `a(14)` family.
 
+`scripts/certify_chain_formula.py` checks the defining sums against
+
+```text
+rho(n,2t-1) = C(2t-1,t)/C(n,t),
+rho(n,2t)   = n*C(n-t-1,t-1)/(2t*C(n,2t)),
+```
+
+at every weight for `3<=n<=250`.  It also checks the predicted minimizing
+weights and the universal bound
+
+```text
+a(n) <= floor(C(n,t)/C(2t-1,t)),
+t = ceiling((n-2)/5).
+```
+
+`certificates/chain_formula.json` is the deterministic record of this audit.
+The symbolic proof is in the manuscript; the finite range is an
+implementation check, not a substitute for that proof.
+
 ## `A286874(15)=42`
 
 - `constructions/a15_42.txt`, due to Steinar H. Gunderson, supplies the lower
@@ -50,6 +69,6 @@ classified `a(14)` family.
 
 ## Whole-package replay
 
-`scripts/replay_all.py` regenerates the three claim certificates and checks
+`scripts/replay_all.py` regenerates the four claim certificates and checks
 their final assertions before writing `certificates/replay_summary.json`.
 `SHA256SUMS` protects the complete reproducible snapshot.

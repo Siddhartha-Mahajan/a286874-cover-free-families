@@ -1,0 +1,2296 @@
+{
+  "claim": "For n>=3 and t=ceiling((n-2)/5), A286874(n)<=floor(C(n,t)/C(2t-1,t))",
+  "closed_forms": {
+    "even_weight_2t": "n*C(n-t-1,t-1)/(2t*C(n,2t))",
+    "odd_weight_2t_minus_1": "C(2t-1,t)/C(n,t)"
+  },
+  "implementation_checked_range": [
+    3,
+    250
+  ],
+  "proved": true,
+  "rows": [
+    {
+      "chain_upper_bound": 3,
+      "minimum_rho": "1/3",
+      "minimum_weights": [
+        1
+      ],
+      "n": 3,
+      "t": 1
+    },
+    {
+      "chain_upper_bound": 4,
+      "minimum_rho": "1/4",
+      "minimum_weights": [
+        1
+      ],
+      "n": 4,
+      "t": 1
+    },
+    {
+      "chain_upper_bound": 5,
+      "minimum_rho": "1/5",
+      "minimum_weights": [
+        1
+      ],
+      "n": 5,
+      "t": 1
+    },
+    {
+      "chain_upper_bound": 6,
+      "minimum_rho": "1/6",
+      "minimum_weights": [
+        1
+      ],
+      "n": 6,
+      "t": 1
+    },
+    {
+      "chain_upper_bound": 7,
+      "minimum_rho": "1/7",
+      "minimum_weights": [
+        1,
+        3
+      ],
+      "n": 7,
+      "t": 1
+    },
+    {
+      "chain_upper_bound": 9,
+      "minimum_rho": "3/28",
+      "minimum_weights": [
+        3
+      ],
+      "n": 8,
+      "t": 2
+    },
+    {
+      "chain_upper_bound": 12,
+      "minimum_rho": "1/12",
+      "minimum_weights": [
+        3
+      ],
+      "n": 9,
+      "t": 2
+    },
+    {
+      "chain_upper_bound": 15,
+      "minimum_rho": "1/15",
+      "minimum_weights": [
+        3
+      ],
+      "n": 10,
+      "t": 2
+    },
+    {
+      "chain_upper_bound": 18,
+      "minimum_rho": "3/55",
+      "minimum_weights": [
+        3
+      ],
+      "n": 11,
+      "t": 2
+    },
+    {
+      "chain_upper_bound": 22,
+      "minimum_rho": "1/22",
+      "minimum_weights": [
+        3,
+        5
+      ],
+      "n": 12,
+      "t": 2
+    },
+    {
+      "chain_upper_bound": 28,
+      "minimum_rho": "5/143",
+      "minimum_weights": [
+        5
+      ],
+      "n": 13,
+      "t": 3
+    },
+    {
+      "chain_upper_bound": 36,
+      "minimum_rho": "5/182",
+      "minimum_weights": [
+        5
+      ],
+      "n": 14,
+      "t": 3
+    },
+    {
+      "chain_upper_bound": 45,
+      "minimum_rho": "2/91",
+      "minimum_weights": [
+        5
+      ],
+      "n": 15,
+      "t": 3
+    },
+    {
+      "chain_upper_bound": 56,
+      "minimum_rho": "1/56",
+      "minimum_weights": [
+        5
+      ],
+      "n": 16,
+      "t": 3
+    },
+    {
+      "chain_upper_bound": 68,
+      "minimum_rho": "1/68",
+      "minimum_weights": [
+        5,
+        7
+      ],
+      "n": 17,
+      "t": 3
+    },
+    {
+      "chain_upper_bound": 87,
+      "minimum_rho": "7/612",
+      "minimum_weights": [
+        7
+      ],
+      "n": 18,
+      "t": 4
+    },
+    {
+      "chain_upper_bound": 110,
+      "minimum_rho": "35/3876",
+      "minimum_weights": [
+        7
+      ],
+      "n": 19,
+      "t": 4
+    },
+    {
+      "chain_upper_bound": 138,
+      "minimum_rho": "7/969",
+      "minimum_weights": [
+        7
+      ],
+      "n": 20,
+      "t": 4
+    },
+    {
+      "chain_upper_bound": 171,
+      "minimum_rho": "1/171",
+      "minimum_weights": [
+        7
+      ],
+      "n": 21,
+      "t": 4
+    },
+    {
+      "chain_upper_bound": 209,
+      "minimum_rho": "1/209",
+      "minimum_weights": [
+        7,
+        9
+      ],
+      "n": 22,
+      "t": 4
+    },
+    {
+      "chain_upper_bound": 267,
+      "minimum_rho": "18/4807",
+      "minimum_weights": [
+        9
+      ],
+      "n": 23,
+      "t": 5
+    },
+    {
+      "chain_upper_bound": 337,
+      "minimum_rho": "3/1012",
+      "minimum_weights": [
+        9
+      ],
+      "n": 24,
+      "t": 5
+    },
+    {
+      "chain_upper_bound": 421,
+      "minimum_rho": "3/1265",
+      "minimum_weights": [
+        9
+      ],
+      "n": 25,
+      "t": 5
+    },
+    {
+      "chain_upper_bound": 522,
+      "minimum_rho": "63/32890",
+      "minimum_weights": [
+        9
+      ],
+      "n": 26,
+      "t": 5
+    },
+    {
+      "chain_upper_bound": 640,
+      "minimum_rho": "7/4485",
+      "minimum_weights": [
+        9,
+        11
+      ],
+      "n": 27,
+      "t": 5
+    },
+    {
+      "chain_upper_bound": 815,
+      "minimum_rho": "11/8970",
+      "minimum_weights": [
+        11
+      ],
+      "n": 28,
+      "t": 6
+    },
+    {
+      "chain_upper_bound": 1028,
+      "minimum_rho": "11/11310",
+      "minimum_weights": [
+        11
+      ],
+      "n": 29,
+      "t": 6
+    },
+    {
+      "chain_upper_bound": 1285,
+      "minimum_rho": "22/28275",
+      "minimum_weights": [
+        11
+      ],
+      "n": 30,
+      "t": 6
+    },
+    {
+      "chain_upper_bound": 1593,
+      "minimum_rho": "22/35061",
+      "minimum_weights": [
+        11
+      ],
+      "n": 31,
+      "t": 6
+    },
+    {
+      "chain_upper_bound": 1961,
+      "minimum_rho": "11/21576",
+      "minimum_weights": [
+        11,
+        13
+      ],
+      "n": 32,
+      "t": 6
+    },
+    {
+      "chain_upper_bound": 2489,
+      "minimum_rho": "13/32364",
+      "minimum_weights": [
+        13
+      ],
+      "n": 33,
+      "t": 7
+    },
+    {
+      "chain_upper_bound": 3134,
+      "minimum_rho": "39/122264",
+      "minimum_weights": [
+        13
+      ],
+      "n": 34,
+      "t": 7
+    },
+    {
+      "chain_upper_bound": 3918,
+      "minimum_rho": "39/152830",
+      "minimum_weights": [
+        13
+      ],
+      "n": 35,
+      "t": 7
+    },
+    {
+      "chain_upper_bound": 4864,
+      "minimum_rho": "13/63240",
+      "minimum_weights": [
+        13
+      ],
+      "n": 36,
+      "t": 7
+    },
+    {
+      "chain_upper_bound": 5999,
+      "minimum_rho": "13/77996",
+      "minimum_weights": [
+        13,
+        15
+      ],
+      "n": 37,
+      "t": 7
+    },
+    {
+      "chain_upper_bound": 7599,
+      "minimum_rho": "195/1481924",
+      "minimum_weights": [
+        15
+      ],
+      "n": 38,
+      "t": 8
+    },
+    {
+      "chain_upper_bound": 9560,
+      "minimum_rho": "5/47804",
+      "minimum_weights": [
+        15
+      ],
+      "n": 39,
+      "t": 8
+    },
+    {
+      "chain_upper_bound": 11951,
+      "minimum_rho": "1/11951",
+      "minimum_weights": [
+        15
+      ],
+      "n": 40,
+      "t": 8
+    },
+    {
+      "chain_upper_bound": 14848,
+      "minimum_rho": "33/489991",
+      "minimum_weights": [
+        15
+      ],
+      "n": 41,
+      "t": 8
+    },
+    {
+      "chain_upper_bound": 18341,
+      "minimum_rho": "11/201761",
+      "minimum_weights": [
+        15,
+        17
+      ],
+      "n": 42,
+      "t": 8
+    },
+    {
+      "chain_upper_bound": 23197,
+      "minimum_rho": "374/8675723",
+      "minimum_weights": [
+        17
+      ],
+      "n": 43,
+      "t": 9
+    },
+    {
+      "chain_upper_bound": 29162,
+      "minimum_rho": "85/2478778",
+      "minimum_weights": [
+        17
+      ],
+      "n": 44,
+      "t": 9
+    },
+    {
+      "chain_upper_bound": 36452,
+      "minimum_rho": "34/1239389",
+      "minimum_weights": [
+        17
+      ],
+      "n": 45,
+      "t": 9
+    },
+    {
+      "chain_upper_bound": 45319,
+      "minimum_rho": "17/770431",
+      "minimum_weights": [
+        17
+      ],
+      "n": 46,
+      "t": 9
+    },
+    {
+      "chain_upper_bound": 56053,
+      "minimum_rho": "34/1905803",
+      "minimum_weights": [
+        17,
+        19
+      ],
+      "n": 47,
+      "t": 9
+    },
+    {
+      "chain_upper_bound": 70803,
+      "minimum_rho": "323/22869636",
+      "minimum_weights": [
+        19
+      ],
+      "n": 48,
+      "t": 10
+    },
+    {
+      "chain_upper_bound": 88958,
+      "minimum_rho": "4199/373537388",
+      "minimum_weights": [
+        19
+      ],
+      "n": 49,
+      "t": 10
+    },
+    {
+      "chain_upper_bound": 111198,
+      "minimum_rho": "4199/466921735",
+      "minimum_weights": [
+        19
+      ],
+      "n": 50,
+      "t": 10
+    },
+    {
+      "chain_upper_bound": 138319,
+      "minimum_rho": "247/34165005",
+      "minimum_weights": [
+        19
+      ],
+      "n": 51,
+      "t": 10
+    },
+    {
+      "chain_upper_bound": 171253,
+      "minimum_rho": "19/3253810",
+      "minimum_weights": [
+        19,
+        21
+      ],
+      "n": 52,
+      "t": 10
+    },
+    {
+      "chain_upper_bound": 216105,
+      "minimum_rho": "57/12317995",
+      "minimum_weights": [
+        21
+      ],
+      "n": 53,
+      "t": 11
+    },
+    {
+      "chain_upper_bound": 271387,
+      "minimum_rho": "19/5156370",
+      "minimum_weights": [
+        21
+      ],
+      "n": 54,
+      "t": 11
+    },
+    {
+      "chain_upper_bound": 339234,
+      "minimum_rho": "38/12890925",
+      "minimum_weights": [
+        21
+      ],
+      "n": 55,
+      "t": 11
+    },
+    {
+      "chain_upper_bound": 422158,
+      "minimum_rho": "19/8021020",
+      "minimum_weights": [
+        21
+      ],
+      "n": 56,
+      "t": 11
+    },
+    {
+      "chain_upper_bound": 523110,
+      "minimum_rho": "1/523110",
+      "minimum_weights": [
+        21,
+        23
+      ],
+      "n": 57,
+      "t": 11
+    },
+    {
+      "chain_upper_bound": 659573,
+      "minimum_rho": "23/15170190",
+      "minimum_weights": [
+        23
+      ],
+      "n": 58,
+      "t": 12
+    },
+    {
+      "chain_upper_bound": 827975,
+      "minimum_rho": "23/19043430",
+      "minimum_weights": [
+        23
+      ],
+      "n": 59,
+      "t": 12
+    },
+    {
+      "chain_upper_bound": 1034969,
+      "minimum_rho": "46/47608575",
+      "minimum_weights": [
+        23
+      ],
+      "n": 60,
+      "t": 12
+    },
+    {
+      "chain_upper_bound": 1288430,
+      "minimum_rho": "322/414874725",
+      "minimum_weights": [
+        23
+      ],
+      "n": 61,
+      "t": 12
+    },
+    {
+      "chain_upper_bound": 1597654,
+      "minimum_rho": "322/514444659",
+      "minimum_weights": [
+        23,
+        25
+      ],
+      "n": 62,
+      "t": 12
+    },
+    {
+      "chain_upper_bound": 2013044,
+      "minimum_rho": "2300/4630001931",
+      "minimum_weights": [
+        25
+      ],
+      "n": 63,
+      "t": 13
+    },
+    {
+      "chain_upper_bound": 2526173,
+      "minimum_rho": "9775/24693343632",
+      "minimum_weights": [
+        25
+      ],
+      "n": 64,
+      "t": 13
+    },
+    {
+      "chain_upper_bound": 3157716,
+      "minimum_rho": "1955/6173335908",
+      "minimum_weights": [
+        25
+      ],
+      "n": 65,
+      "t": 13
+    },
+    {
+      "chain_upper_bound": 3932250,
+      "minimum_rho": "1955/7687550376",
+      "minimum_weights": [
+        25
+      ],
+      "n": 66,
+      "t": 13
+    },
+    {
+      "chain_upper_bound": 4878903,
+      "minimum_rho": "1955/9538256948",
+      "minimum_weights": [
+        25,
+        27
+      ],
+      "n": 67,
+      "t": 13
+    },
+    {
+      "chain_upper_bound": 6143804,
+      "minimum_rho": "3105/19076513896",
+      "minimum_weights": [
+        27
+      ],
+      "n": 68,
+      "t": 14
+    },
+    {
+      "chain_upper_bound": 7707682,
+      "minimum_rho": "225/1734228536",
+      "minimum_weights": [
+        27
+      ],
+      "n": 69,
+      "t": 14
+    },
+    {
+      "chain_upper_bound": 9634602,
+      "minimum_rho": "45/433557134",
+      "minimum_weights": [
+        27
+      ],
+      "n": 70,
+      "t": 14
+    },
+    {
+      "chain_upper_bound": 12000996,
+      "minimum_rho": "2565/30782556514",
+      "minimum_weights": [
+        27
+      ],
+      "n": 71,
+      "t": 14
+    },
+    {
+      "chain_upper_bound": 14897788,
+      "minimum_rho": "285/4245869864",
+      "minimum_weights": [
+        27,
+        29
+      ],
+      "n": 72,
+      "t": 14
+    },
+    {
+      "chain_upper_bound": 18750665,
+      "minimum_rho": "8265/154974250036",
+      "minimum_weights": [
+        29
+      ],
+      "n": 73,
+      "t": 15
+    },
+    {
+      "chain_upper_bound": 23517783,
+      "minimum_rho": "8265/194374483096",
+      "minimum_weights": [
+        29
+      ],
+      "n": 74,
+      "t": 15
+    },
+    {
+      "chain_upper_bound": 29397229,
+      "minimum_rho": "1653/48593620774",
+      "minimum_weights": [
+        29
+      ],
+      "n": 75,
+      "t": 15
+    },
+    {
+      "chain_upper_bound": 36626056,
+      "minimum_rho": "87/3186466936",
+      "minimum_weights": [
+        29
+      ],
+      "n": 76,
+      "t": 15
+    },
+    {
+      "chain_upper_bound": 45487199,
+      "minimum_rho": "87/3957386356",
+      "minimum_weights": [
+        29,
+        31
+      ],
+      "n": 77,
+      "t": 15
+    },
+    {
+      "chain_upper_bound": 57225831,
+      "minimum_rho": "899/51446022628",
+      "minimum_weights": [
+        31
+      ],
+      "n": 78,
+      "t": 16
+    },
+    {
+      "chain_upper_bound": 71759376,
+      "minimum_rho": "8091/580605112516",
+      "minimum_weights": [
+        31
+      ],
+      "n": 79,
+      "t": 16
+    },
+    {
+      "chain_upper_bound": 89699220,
+      "minimum_rho": "8091/725756390645",
+      "minimum_weights": [
+        31
+      ],
+      "n": 80,
+      "t": 16
+    },
+    {
+      "chain_upper_bound": 111779028,
+      "minimum_rho": "899/100489346397",
+      "minimum_weights": [
+        31
+      ],
+      "n": 81,
+      "t": 16
+    },
+    {
+      "chain_upper_bound": 138876974,
+      "minimum_rho": "899/124850400069",
+      "minimum_weights": [
+        31,
+        33
+      ],
+      "n": 82,
+      "t": 16
+    },
+    {
+      "chain_upper_bound": 174648316,
+      "minimum_rho": "19778/3454194401909",
+      "minimum_weights": [
+        33
+      ],
+      "n": 83,
+      "t": 17
+    },
+    {
+      "chain_upper_bound": 218962068,
+      "minimum_rho": "9889/2165315893734",
+      "minimum_weights": [
+        33
+      ],
+      "n": 84,
+      "t": 17
+    },
+    {
+      "chain_upper_bound": 273702585,
+      "minimum_rho": "19778/5413289734335",
+      "minimum_weights": [
+        33
+      ],
+      "n": 85,
+      "t": 17
+    },
+    {
+      "chain_upper_bound": 341136555,
+      "minimum_rho": "227447/77590486192135",
+      "minimum_weights": [
+        33
+      ],
+      "n": 86,
+      "t": 17
+    },
+    {
+      "chain_upper_bound": 423984004,
+      "minimum_rho": "15686/6650613102183",
+      "minimum_weights": [
+        33,
+        35
+      ],
+      "n": 87,
+      "t": 17
+    },
+    {
+      "chain_upper_bound": 533008463,
+      "minimum_rho": "24955/13301226204366",
+      "minimum_weights": [
+        35
+      ],
+      "n": 88,
+      "t": 18
+    },
+    {
+      "chain_upper_bound": 668137369,
+      "minimum_rho": "24955/16673368058994",
+      "minimum_weights": [
+        35
+      ],
+      "n": 89,
+      "t": 18
+    },
+    {
+      "chain_upper_bound": 835171712,
+      "minimum_rho": "9982/8336684029497",
+      "minimum_weights": [
+        35
+      ],
+      "n": 90,
+      "t": 18
+    },
+    {
+      "chain_upper_bound": 1041104462,
+      "minimum_rho": "1426/1484614964157",
+      "minimum_weights": [
+        35
+      ],
+      "n": 91,
+      "t": 18
+    },
+    {
+      "chain_upper_bound": 1294346089,
+      "minimum_rho": "31/40124728761",
+      "minimum_weights": [
+        35,
+        37
+      ],
+      "n": 92,
+      "t": 18
+    },
+    {
+      "chain_upper_bound": 1626678193,
+      "minimum_rho": "74/120374186283",
+      "minimum_weights": [
+        37
+      ],
+      "n": 93,
+      "t": 19
+    },
+    {
+      "chain_upper_bound": 2038770001,
+      "minimum_rho": "925/1885862251767",
+      "minimum_weights": [
+        37
+      ],
+      "n": 94,
+      "t": 19
+    },
+    {
+      "chain_upper_bound": 2548462502,
+      "minimum_rho": "740/1885862251767",
+      "minimum_weights": [
+        37
+      ],
+      "n": 95,
+      "t": 19
+    },
+    {
+      "chain_upper_bound": 3177303899,
+      "minimum_rho": "14245/45260694042408",
+      "minimum_weights": [
+        37
+      ],
+      "n": 96,
+      "t": 19
+    },
+    {
+      "chain_upper_bound": 3951262541,
+      "minimum_rho": "14245/56285734898892",
+      "minimum_weights": [
+        37,
+        39
+      ],
+      "n": 97,
+      "t": 19
+    },
+    {
+      "chain_upper_bound": 4964406782,
+      "minimum_rho": "26455/131333381430748",
+      "minimum_weights": [
+        39
+      ],
+      "n": 98,
+      "t": 20
+    },
+    {
+      "chain_upper_bound": 6221218626,
+      "minimum_rho": "2405/14962030795908",
+      "minimum_weights": [
+        39
+      ],
+      "n": 99,
+      "t": 20
+    },
+    {
+      "chain_upper_bound": 7776523282,
+      "minimum_rho": "481/3740507698977",
+      "minimum_weights": [
+        39
+      ],
+      "n": 100,
+      "t": 20
+    },
+    {
+      "chain_upper_bound": 9696652488,
+      "minimum_rho": "4329/41976808621853",
+      "minimum_weights": [
+        39
+      ],
+      "n": 101,
+      "t": 20
+    },
+    {
+      "chain_upper_bound": 12061689680,
+      "minimum_rho": "1443/17405018209061",
+      "minimum_weights": [
+        39,
+        41
+      ],
+      "n": 102,
+      "t": 20
+    },
+    {
+      "chain_upper_bound": 15150658989,
+      "minimum_rho": "118326/1792716875533283",
+      "minimum_weights": [
+        41
+      ],
+      "n": 103,
+      "t": 21
+    },
+    {
+      "chain_upper_bound": 18983958251,
+      "minimum_rho": "4551/86395994001604",
+      "minimum_weights": [
+        41
+      ],
+      "n": 104,
+      "t": 21
+    },
+    {
+      "chain_upper_bound": 23729947814,
+      "minimum_rho": "4551/107994992502005",
+      "minimum_weights": [
+        41
+      ],
+      "n": 105,
+      "t": 21
+    },
+    {
+      "chain_upper_bound": 29592640803,
+      "minimum_rho": "4551/134676108296618",
+      "minimum_weights": [
+        41
+      ],
+      "n": 106,
+      "t": 21
+    },
+    {
+      "chain_upper_bound": 36818750767,
+      "minimum_rho": "4551/167562134741141",
+      "minimum_weights": [
+        41,
+        43
+      ],
+      "n": 107,
+      "t": 21
+    },
+    {
+      "chain_upper_bound": 46237500963,
+      "minimum_rho": "65231/3016118425340538",
+      "minimum_weights": [
+        43
+      ],
+      "n": 108,
+      "t": 22
+    },
+    {
+      "chain_upper_bound": 57929742586,
+      "minimum_rho": "1891699/109585636120706214",
+      "minimum_weights": [
+        43
+      ],
+      "n": 109,
+      "t": 22
+    },
+    {
+      "chain_upper_bound": 72412178232,
+      "minimum_rho": "3783398/273964090301765535",
+      "minimum_weights": [
+        43
+      ],
+      "n": 110,
+      "t": 22
+    },
+    {
+      "chain_upper_bound": 90311817796,
+      "minimum_rho": "102254/9234744616913445",
+      "minimum_weights": [
+        43
+      ],
+      "n": 111,
+      "t": 22
+    },
+    {
+      "chain_upper_bound": 112388039923,
+      "minimum_rho": "51127/5746063317190588",
+      "minimum_weights": [
+        43,
+        45
+      ],
+      "n": 112,
+      "t": 22
+    },
+    {
+      "chain_upper_bound": 141109427904,
+      "minimum_rho": "2300715/324652577421268222",
+      "minimum_weights": [
+        45
+      ],
+      "n": 113,
+      "t": 23
+    },
+    {
+      "chain_upper_bound": 176774448144,
+      "minimum_rho": "9969765/1762399706001170348",
+      "minimum_weights": [
+        45
+      ],
+      "n": 114,
+      "t": 23
+    },
+    {
+      "chain_upper_bound": 220968060180,
+      "minimum_rho": "1993953/440599926500292587",
+      "minimum_weights": [
+        45
+      ],
+      "n": 115,
+      "t": 23
+    },
+    {
+      "chain_upper_bound": 275616075063,
+      "minimum_rho": "6394401/1762399706001170348",
+      "minimum_weights": [
+        45
+      ],
+      "n": 116,
+      "t": 23
+    },
+    {
+      "chain_upper_bound": 343054050876,
+      "minimum_rho": "54653/18748933042565642",
+      "minimum_weights": [
+        45,
+        47
+      ],
+      "n": 117,
+      "t": 23
+    },
+    {
+      "chain_upper_bound": 430642319185,
+      "minimum_rho": "2568691/1106187049511372878",
+      "minimum_weights": [
+        47
+      ],
+      "n": 118,
+      "t": 24
+    },
+    {
+      "chain_upper_bound": 539436168243,
+      "minimum_rho": "12843455/6928224152202809078",
+      "minimum_weights": [
+        47
+      ],
+      "n": 119,
+      "t": 24
+    },
+    {
+      "chain_upper_bound": 674295210303,
+      "minimum_rho": "5137382/3464112076101404539",
+      "minimum_weights": [
+        47
+      ],
+      "n": 120,
+      "t": 24
+    },
+    {
+      "chain_upper_bound": 841131138626,
+      "minimum_rho": "5137382/4321211971219277827",
+      "minimum_weights": [
+        47
+      ],
+      "n": 121,
+      "t": 24
+    },
+    {
+      "chain_upper_bound": 1047122437881,
+      "minimum_rho": "5137382/5379467964170937703",
+      "minimum_weights": [
+        47,
+        49
+      ],
+      "n": 122,
+      "t": 24
+    },
+    {
+      "chain_upper_bound": 1314245508770,
+      "minimum_rho": "12279596/16138403892512813109",
+      "minimum_weights": [
+        49
+      ],
+      "n": 123,
+      "t": 25
+    },
+    {
+      "chain_upper_bound": 1646125687752,
+      "minimum_rho": "297087/489042542197357973",
+      "minimum_weights": [
+        49
+      ],
+      "n": 124,
+      "t": 25
+    },
+    {
+      "chain_upper_bound": 2057657109690,
+      "minimum_rho": "1188348/2445212710986789865",
+      "minimum_weights": [
+        49
+      ],
+      "n": 125,
+      "t": 25
+    },
+    {
+      "chain_upper_bound": 2566978176445,
+      "minimum_rho": "28294/72630080524360095",
+      "minimum_weights": [
+        49
+      ],
+      "n": 126,
+      "t": 25
+    },
+    {
+      "chain_upper_bound": 3196139494202,
+      "minimum_rho": "56588/180863141697916315",
+      "minimum_weights": [
+        49,
+        51
+      ],
+      "n": 127,
+      "t": 25
+    },
+    {
+      "chain_upper_bound": 4010841718214,
+      "minimum_rho": "721497/2893810267166661040",
+      "minimum_weights": [
+        51
+      ],
+      "n": 128,
+      "t": 26
+    },
+    {
+      "chain_upper_bound": 5023287200482,
+      "minimum_rho": "5593/28095245312297680",
+      "minimum_weights": [
+        51
+      ],
+      "n": 129,
+      "t": 26
+    },
+    {
+      "chain_upper_bound": 6279109000602,
+      "minimum_rho": "5593/35119056640372100",
+      "minimum_weights": [
+        51
+      ],
+      "n": 130,
+      "t": 26
+    },
+    {
+      "chain_upper_bound": 7833935991228,
+      "minimum_rho": "117453/920119283977749020",
+      "minimum_weights": [
+        51
+      ],
+      "n": 131,
+      "t": 26
+    },
+    {
+      "chain_upper_bound": 9755467460774,
+      "minimum_rho": "39151/381936306556801480",
+      "minimum_weights": [
+        51,
+        53
+      ],
+      "n": 132,
+      "t": 26
+    },
+    {
+      "chain_upper_bound": 12240350681915,
+      "minimum_rho": "296429/3628394912289614060",
+      "minimum_weights": [
+        53
+      ],
+      "n": 133,
+      "t": 27
+    },
+    {
+      "chain_upper_bound": 15329037302586,
+      "minimum_rho": "296429/4543971198568301720",
+      "minimum_weights": [
+        53
+      ],
+      "n": 134,
+      "t": 27
+    },
+    {
+      "chain_upper_bound": 19161296628232,
+      "minimum_rho": "296429/5679963998210377150",
+      "minimum_weights": [
+        53
+      ],
+      "n": 135,
+      "t": 27
+    },
+    {
+      "chain_upper_bound": 23907672857244,
+      "minimum_rho": "17437/416878091611770800",
+      "minimum_weights": [
+        53
+      ],
+      "n": 136,
+      "t": 27
+    },
+    {
+      "chain_upper_bound": 29775919831295,
+      "minimum_rho": "17437/519202714098296360",
+      "minimum_weights": [
+        53,
+        55
+      ],
+      "n": 137,
+      "t": 27
+    },
+    {
+      "chain_upper_bound": 37355244879261,
+      "minimum_rho": "17437/651363404959680888",
+      "minimum_weights": [
+        55
+      ],
+      "n": 138,
+      "t": 28
+    },
+    {
+      "chain_upper_bound": 46778189533489,
+      "minimum_rho": "645169/30179837763131881144",
+      "minimum_weights": [
+        55
+      ],
+      "n": 139,
+      "t": 28
+    },
+    {
+      "chain_upper_bound": 58472736916861,
+      "minimum_rho": "645169/37724797203914851430",
+      "minimum_weights": [
+        55
+      ],
+      "n": 140,
+      "t": 28
+    },
+    {
+      "chain_upper_bound": 72961556683871,
+      "minimum_rho": "13727/1001543288599509330",
+      "minimum_weights": [
+        55
+      ],
+      "n": 141,
+      "t": 28
+    },
+    {
+      "chain_upper_bound": 90881939027279,
+      "minimum_rho": "13727/1247536377027458990",
+      "minimum_weights": [
+        55,
+        57
+      ],
+      "n": 142,
+      "t": 28
+    },
+    {
+      "chain_upper_bound": 114001028779832,
+      "minimum_rho": "782439/89198850957463317785",
+      "minimum_weights": [
+        57
+      ],
+      "n": 143,
+      "t": 29
+    },
+    {
+      "chain_upper_bound": 142749114298224,
+      "minimum_rho": "260813/37230824747462950032",
+      "minimum_weights": [
+        57
+      ],
+      "n": 144,
+      "t": 29
+    },
+    {
+      "chain_upper_bound": 178436392872781,
+      "minimum_rho": "260813/46538530934328687540",
+      "minimum_weights": [
+        57
+      ],
+      "n": 145,
+      "t": 29
+    },
+    {
+      "chain_upper_bound": 222664216747231,
+      "minimum_rho": "782439/174221167087486881560",
+      "minimum_weights": [
+        57
+      ],
+      "n": 146,
+      "t": 29
+    },
+    {
+      "chain_upper_bound": 277386778490194,
+      "minimum_rho": "37259/10335153979766170940",
+      "minimum_weights": [
+        57,
+        59
+      ],
+      "n": 147,
+      "t": 29
+    },
+    {
+      "chain_upper_bound": 347908840818210,
+      "minimum_rho": "59413/20670307959532341880",
+      "minimum_weights": [
+        59
+      ],
+      "n": 148,
+      "t": 30
+    },
+    {
+      "chain_upper_bound": 435616951948851,
+      "minimum_rho": "1010021/439982269424331277160",
+      "minimum_weights": [
+        59
+      ],
+      "n": 149,
+      "t": 30
+    },
+    {
+      "chain_upper_bound": 544521189936064,
+      "minimum_rho": "1010021/549977836780414096450",
+      "minimum_weights": [
+        59
+      ],
+      "n": 150,
+      "t": 30
+    },
+    {
+      "chain_upper_bound": 679526443639221,
+      "minimum_rho": "11110231/7549695759440229869450",
+      "minimum_weights": [
+        59
+      ],
+      "n": 151,
+      "t": 30
+    },
+    {
+      "chain_upper_bound": 846623110107882,
+      "minimum_rho": "584749/495062017012474089800",
+      "minimum_weights": [
+        59,
+        61
+      ],
+      "n": 152,
+      "t": 30
+    },
+    {
+      "chain_upper_bound": 1061748654479557,
+      "minimum_rho": "2098217/2227779076556133404100",
+      "minimum_weights": [
+        61
+      ],
+      "n": 153,
+      "t": 31
+    },
+    {
+      "chain_upper_bound": 1329343843819933,
+      "minimum_rho": "7820627/10396302357261955885800",
+      "minimum_weights": [
+        61
+      ],
+      "n": 154,
+      "t": 31
+    },
+    {
+      "chain_upper_bound": 1661679804774917,
+      "minimum_rho": "7820627/12995377946577444857250",
+      "minimum_weights": [
+        61
+      ],
+      "n": 155,
+      "t": 31
+    },
+    {
+      "chain_upper_bound": 2073776396359096,
+      "minimum_rho": "7820627/16218231677328651181848",
+      "minimum_weights": [
+        61
+      ],
+      "n": 156,
+      "t": 31
+    },
+    {
+      "chain_upper_bound": 2583991224034747,
+      "minimum_rho": "7820627/20208431534449192345636",
+      "minimum_weights": [
+        61,
+        63
+      ],
+      "n": 157,
+      "t": 31
+    },
+    {
+      "chain_upper_bound": 3240242963472143,
+      "minimum_rho": "492699501/1596466091221486195305244",
+      "minimum_weights": [
+        63
+      ],
+      "n": 158,
+      "t": 32
+    },
+    {
+      "chain_upper_bound": 4056682135370636,
+      "minimum_rho": "3098739/12570599143476269254372",
+      "minimum_weights": [
+        63
+      ],
+      "n": 159,
+      "t": 32
+    },
+    {
+      "chain_upper_bound": 5070852669213295,
+      "minimum_rho": "3098739/15713248929345336567965",
+      "minimum_weights": [
+        63
+      ],
+      "n": 160,
+      "t": 32
+    },
+    {
+      "chain_upper_bound": 6328738602661554,
+      "minimum_rho": "57105333/361404725374942741063195",
+      "minimum_weights": [
+        63
+      ],
+      "n": 161,
+      "t": 32
+    },
+    {
+      "chain_upper_bound": 7886581951009013,
+      "minimum_rho": "6345037/50040654282684379531827",
+      "minimum_weights": [
+        63,
+        65
+      ],
+      "n": 162,
+      "t": 32
+    },
+    {
+      "chain_upper_bound": 9888560446265148,
+      "minimum_rho": "824854810/8156626648077553863687801",
+      "minimum_weights": [
+        65
+      ],
+      "n": 163,
+      "t": 33
+    },
+    {
+      "chain_upper_bound": 12379571856393009,
+      "minimum_rho": "10059205/124528651115687845247142",
+      "minimum_weights": [
+        65
+      ],
+      "n": 164,
+      "t": 33
+    },
+    {
+      "chain_upper_bound": 15474464820491262,
+      "minimum_rho": "4023682/62264325557843922623571",
+      "minimum_weights": [
+        65
+      ],
+      "n": 165,
+      "t": 33
+    },
+    {
+      "chain_upper_bound": 19313993685725936,
+      "minimum_rho": "267574853/5167939021301045577756393",
+      "minimum_weights": [
+        65
+      ],
+      "n": 166,
+      "t": 33
+    },
+    {
+      "chain_upper_bound": 24070424966539039,
+      "minimum_rho": "535149706/12881280844138427037094293",
+      "minimum_weights": [
+        65,
+        67
+      ],
+      "n": 167,
+      "t": 33
+    },
+    {
+      "chain_upper_bound": 30177846226705661,
+      "minimum_rho": "2561073593/77287685064830562222565758",
+      "minimum_weights": [
+        67
+      ],
+      "n": 168,
+      "t": 34
+    },
+    {
+      "chain_upper_bound": 37778192683801902,
+      "minimum_rho": "985028305/37212589105288789218272402",
+      "minimum_weights": [
+        67
+      ],
+      "n": 169,
+      "t": 34
+    },
+    {
+      "chain_upper_bound": 47222740854752378,
+      "minimum_rho": "394011322/18606294552644394609136201",
+      "minimum_weights": [
+        67
+      ],
+      "n": 170,
+      "t": 34
+    },
+    {
+      "chain_upper_bound": 58942253183669027,
+      "minimum_rho": "20737438/1222311320976639061914057",
+      "minimum_weights": [
+        67
+      ],
+      "n": 171,
+      "t": 34
+    },
+    {
+      "chain_upper_bound": 73464257591239656,
+      "minimum_rho": "241133/17714656825748392201653",
+      "minimum_weights": [
+        67,
+        69
+      ],
+      "n": 172,
+      "t": 34
+    },
+    {
+      "chain_upper_bound": 92096496835394642,
+      "minimum_rho": "11092118/1021545210284823950295323",
+      "minimum_weights": [
+        69
+      ],
+      "n": 173,
+      "t": 35
+    },
+    {
+      "chain_upper_bound": 115286262225601926,
+      "minimum_rho": "5546059/639384412192659594789159",
+      "minimum_weights": [
+        69
+      ],
+      "n": 174,
+      "t": 35
+    },
+    {
+      "chain_upper_bound": 144107827782002408,
+      "minimum_rho": "22184236/3196922060963297973945795",
+      "minimum_weights": [
+        69
+      ],
+      "n": 175,
+      "t": 35
+    },
+    {
+      "chain_upper_bound": 179879274394556197,
+      "minimum_rho": "260664773/46888190227461703617871660",
+      "minimum_weights": [
+        69
+      ],
+      "n": 176,
+      "t": 35
+    },
+    {
+      "chain_upper_bound": 224215715266453851,
+      "minimum_rho": "4418047/990595568185810639814190",
+      "minimum_weights": [
+        69,
+        71
+      ],
+      "n": 177,
+      "t": 35
+    },
+    {
+      "chain_upper_bound": 281059136038230884,
+      "minimum_rho": "313681337/88163005568537146943462910",
+      "minimum_weights": [
+        71
+      ],
+      "n": 178,
+      "t": 36
+    },
+    {
+      "chain_upper_bound": 351815282173729568,
+      "minimum_rho": "313681337/110357888089287757362796230",
+      "minimum_weights": [
+        71
+      ],
+      "n": 179,
+      "t": 36
+    },
+    {
+      "chain_upper_bound": 439769102717161960,
+      "minimum_rho": "627362674/275894720223219393406990575",
+      "minimum_weights": [
+        71
+      ],
+      "n": 180,
+      "t": 36
+    },
+    {
+      "chain_upper_bound": 548953155805560792,
+      "minimum_rho": "627362674/344392719726915242804588235",
+      "minimum_weights": [
+        71
+      ],
+      "n": 181,
+      "t": 36
+    },
+    {
+      "chain_upper_bound": 684311468195973042,
+      "minimum_rho": "627362674/429311472536291604044075745",
+      "minimum_weights": [
+        71,
+        73
+      ],
+      "n": 182,
+      "t": 36
+    },
+    {
+      "chain_upper_bound": 857732867670294978,
+      "minimum_rho": "1501556564/1287934417608874812132227235",
+      "minimum_weights": [
+        73
+      ],
+      "n": 183,
+      "t": 37
+    },
+    {
+      "chain_upper_bound": 1073624813954654938,
+      "minimum_rho": "114248869/122660420724654744012593070",
+      "minimum_weights": [
+        73
+      ],
+      "n": 184,
+      "t": 37
+    },
+    {
+      "chain_upper_bound": 1342031017443318673,
+      "minimum_rho": "228497738/306651051811636860031482675",
+      "minimum_weights": [
+        73
+      ],
+      "n": 185,
+      "t": 37
+    },
+    {
+      "chain_upper_bound": 1675287041909109216,
+      "minimum_rho": "114248869/191399649788471328744482475",
+      "minimum_weights": [
+        73
+      ],
+      "n": 186,
+      "t": 37
+    },
+    {
+      "chain_upper_bound": 2088524512246689489,
+      "minimum_rho": "228497738/477223126805921846336242971",
+      "minimum_weights": [
+        73,
+        75
+      ],
+      "n": 187,
+      "t": 37
+    },
+    {
+      "chain_upper_bound": 2617617388682517493,
+      "minimum_rho": "60770675/159074375601973948778747657",
+      "minimum_weights": [
+        75
+      ],
+      "n": 188,
+      "t": 38
+    },
+    {
+      "chain_upper_bound": 3276355539476793419,
+      "minimum_rho": "8681525/28443762524856268986928389",
+      "minimum_weights": [
+        75
+      ],
+      "n": 189,
+      "t": 38
+    },
+    {
+      "chain_upper_bound": 4095444424345991773,
+      "minimum_rho": "6945220/28443762524856268986928389",
+      "minimum_weights": [
+        75
+      ],
+      "n": 190,
+      "t": 38
+    },
+    {
+      "chain_upper_bound": 5112613627778329599,
+      "minimum_rho": "6945220/35508226419918610303943283",
+      "minimum_weights": [
+        75
+      ],
+      "n": 191,
+      "t": 38
+    },
+    {
+      "chain_upper_bound": 6374167639827527812,
+      "minimum_rho": "12154135/77472494007095149754058072",
+      "minimum_weights": [
+        75,
+        77
+      ],
+      "n": 192,
+      "t": 38
+    },
+    {
+      "chain_upper_bound": 7988404899264369271,
+      "minimum_rho": "935868395/7476095671684681951266603948",
+      "minimum_weights": [
+        77
+      ],
+      "n": 193,
+      "t": 39
+    },
+    {
+      "chain_upper_bound": 9998390648111533153,
+      "minimum_rho": "4679341975/46785889042155751565991005352",
+      "minimum_weights": [
+        77
+      ],
+      "n": 194,
+      "t": 39
+    },
+    {
+      "chain_upper_bound": 12497988310139416441,
+      "minimum_rho": "935868395/11696472260538937891497751338",
+      "minimum_weights": [
+        77
+      ],
+      "n": 195,
+      "t": 39
+    },
+    {
+      "chain_upper_bound": 15602584132403347914,
+      "minimum_rho": "19099355/297999293262138545006312136",
+      "minimum_weights": [
+        77
+      ],
+      "n": 196,
+      "t": 39
+    },
+    {
+      "chain_upper_bound": 19453854899262402146,
+      "minimum_rho": "19099355/371556080839501856748376524",
+      "minimum_weights": [
+        77,
+        79
+      ],
+      "n": 197,
+      "t": 39
+    },
+    {
+      "chain_upper_bound": 24378881456037693829,
+      "minimum_rho": "137168095/3344004727555516710735388716",
+      "minimum_weights": [
+        79
+      ],
+      "n": 198,
+      "t": 40
+    },
+    {
+      "chain_upper_bound": 30511933394663528754,
+      "minimum_rho": "7269909035/221818980261182608478780784828",
+      "minimum_weights": [
+        79
+      ],
+      "n": 199,
+      "t": 40
+    },
+    {
+      "chain_upper_bound": 38139916743329410943,
+      "minimum_rho": "1453981807/55454745065295652119695196207",
+      "minimum_weights": [
+        79
+      ],
+      "n": 200,
+      "t": 40
+    },
+    {
+      "chain_upper_bound": 47615672455957836022,
+      "minimum_rho": "3493896581/166364235195886956359085588621",
+      "minimum_weights": [
+        79
+      ],
+      "n": 201,
+      "t": 40
+    },
+    {
+      "chain_upper_bound": 59372628617922733805,
+      "minimum_rho": "3493896581/207441824133142994966267215441",
+      "minimum_weights": [
+        79,
+        81
+      ],
+      "n": 202,
+      "t": 40
+    },
+    {
+      "chain_upper_bound": 74399034626162438040,
+      "minimum_rho": "80858749446/6015812899861146854021749247789",
+      "minimum_weights": [
+        81
+      ],
+      "n": 203,
+      "t": 41
+    },
+    {
+      "chain_upper_bound": 93112902231516180124,
+      "minimum_rho": "13476458241/1254832138621343515562818861502",
+      "minimum_weights": [
+        81
+      ],
+      "n": 204,
+      "t": 41
+    },
+    {
+      "chain_upper_bound": 116391127789395225155,
+      "minimum_rho": "26952916482/3137080346553358788907047153755",
+      "minimum_weights": [
+        81
+      ],
+      "n": 205,
+      "t": 41
+    },
+    {
+      "chain_upper_bound": 145312559543123735648,
+      "minimum_rho": "444723121953/64623855138999191051485171367353",
+      "minimum_weights": [
+        81
+      ],
+      "n": 206,
+      "t": 41
+    },
+    {
+      "chain_upper_bound": 181203010996545863128,
+      "minimum_rho": "4296841758/778600664325291458451628570691",
+      "minimum_weights": [
+        81,
+        83
+      ],
+      "n": 207,
+      "t": 41
+    },
+    {
+      "chain_upper_bound": 227049555947479153799,
+      "minimum_rho": "178318932957/40487234544915155839484685675932",
+      "minimum_weights": [
+        83
+      ],
+      "n": 208,
+      "t": 42
+    },
+    {
+      "chain_upper_bound": 284151839479180497868,
+      "minimum_rho": "16210812087/4606332073972382999701850466124",
+      "minimum_weights": [
+        83
+      ],
+      "n": 209,
+      "t": 42
+    },
+    {
+      "chain_upper_bound": 355189799348975622335,
+      "minimum_rho": "16210812087/5757915092465478749627313082655",
+      "minimum_weights": [
+        83
+      ],
+      "n": 210,
+      "t": 42
+    },
+    {
+      "chain_upper_bound": 443461820488957729661,
+      "minimum_rho": "16210812087/7188876239705420214031734085445",
+      "minimum_weights": [
+        83
+      ],
+      "n": 211,
+      "t": 42
+    },
+    {
+      "chain_upper_bound": 553022976139170815813,
+      "minimum_rho": "305864379/169150029169539299153687860834",
+      "minimum_weights": [
+        83,
+        85
+      ],
+      "n": 212,
+      "t": 42
+    },
+    {
+      "chain_upper_bound": 692905258339078728048,
+      "minimum_rho": "122058555/84575014584769649576843930417",
+      "minimum_weights": [
+        85
+      ],
+      "n": 213,
+      "t": 43
+    },
+    {
+      "chain_upper_bound": 867144592307385074867,
+      "minimum_rho": "1098526995/952581743217931842602347426802",
+      "minimum_weights": [
+        85
+      ],
+      "n": 214,
+      "t": 43
+    },
+    {
+      "chain_upper_bound": 1083930740384231343584,
+      "minimum_rho": "439410798/476290871608965921301173713401",
+      "minimum_weights": [
+        85
+      ],
+      "n": 215,
+      "t": 43
+    },
+    {
+      "chain_upper_bound": 1353347051577999827828,
+      "minimum_rho": "8137237/11012505701941408584998236148",
+      "minimum_weights": [
+        85
+      ],
+      "n": 216,
+      "t": 43
+    },
+    {
+      "chain_upper_bound": 1687794886163367601372,
+      "minimum_rho": "24411711/41201960988298028671458918002",
+      "minimum_weights": [
+        85,
+        87
+      ],
+      "n": 217,
+      "t": 43
+    },
+    {
+      "chain_upper_bound": 2114593593009276649994,
+      "minimum_rho": "2123818857/4491013747724485125189022062218",
+      "minimum_weights": [
+        87
+      ],
+      "n": 218,
+      "t": 44
+    },
+    {
+      "chain_upper_bound": 2646262839251609064850,
+      "minimum_rho": "242445075/641573392532069303598431723174",
+      "minimum_weights": [
+        87
+      ],
+      "n": 219,
+      "t": 44
+    },
+    {
+      "chain_upper_bound": 3307828549064511331063,
+      "minimum_rho": "96978030/320786696266034651799215861587",
+      "minimum_weights": [
+        87
+      ],
+      "n": 220,
+      "t": 44
+    },
+    {
+      "chain_upper_bound": 4130113612108796633700,
+      "minimum_rho": "1009712430/4170227051458450473389806200631",
+      "minimum_weights": [
+        87
+      ],
+      "n": 221,
+      "t": 44
+    },
+    {
+      "chain_upper_bound": 5151040572405353104952,
+      "minimum_rho": "336570810/1733689897797333342869919431723",
+      "minimum_weights": [
+        87,
+        89
+      ],
+      "n": 222,
+      "t": 44
+    },
+    {
+      "chain_upper_bound": 6453269930597717653957,
+      "minimum_rho": "59909604180/386612847208805335459992033274229",
+      "minimum_weights": [
+        89
+      ],
+      "n": 223,
+      "t": 45
+    },
+    {
+      "chain_upper_bound": 8075600360077590807187,
+      "minimum_rho": "14977401045/120951505272028484836645552309256",
+      "minimum_weights": [
+        89
+      ],
+      "n": 224,
+      "t": 45
+    },
+    {
+      "chain_upper_bound": 10094500450096988508983,
+      "minimum_rho": "2995480209/30237876318007121209161388077314",
+      "minimum_weights": [
+        89
+      ],
+      "n": 225,
+      "t": 45
+    },
+    {
+      "chain_upper_bound": 12604182882441543663151,
+      "minimum_rho": "2995480209/37755580374970217642378307765044",
+      "minimum_weights": [
+        89
+      ],
+      "n": 226,
+      "t": 45
+    },
+    {
+      "chain_upper_bound": 15720601727001265997446,
+      "minimum_rho": "2995480209/47090751346803513213296021223434",
+      "minimum_weights": [
+        89,
+        91
+      ],
+      "n": 227,
+      "t": 45
+    },
+    {
+      "chain_upper_bound": 19693940625034553007790,
+      "minimum_rho": "90862899673/1789448551178533502105248806490492",
+      "minimum_weights": [
+        91
+      ],
+      "n": 228,
+      "t": 46
+    },
+    {
+      "chain_upper_bound": 24644330071764549938710,
+      "minimum_rho": "16627910640159/409783718219884171982101976686322668",
+      "minimum_weights": [
+        91
+      ],
+      "n": 229,
+      "t": 46
+    },
+    {
+      "chain_upper_bound": 30805412589705687423387,
+      "minimum_rho": "16627910640159/512229647774855214977627470857903335",
+      "minimum_weights": [
+        91
+      ],
+      "n": 230,
+      "t": 46
+    },
+    {
+      "chain_upper_bound": 38465136801200074566500,
+      "minimum_rho": "791805268579/30456897975802201971642714483442901",
+      "minimum_weights": [
+        91
+      ],
+      "n": 231,
+      "t": 46
+    },
+    {
+      "chain_upper_bound": 47978020096120523115204,
+      "minimum_rho": "81910889853/3929922319458348641502285739799084",
+      "minimum_weights": [
+        91,
+        93
+      ],
+      "n": 232,
+      "t": 46
+    },
+    {
+      "chain_upper_bound": 60101498292452053149692,
+      "minimum_rho": "7617712756329/457835950216897616735016288686593286",
+      "minimum_weights": [
+        93
+      ],
+      "n": 233,
+      "t": 47
+    },
+    {
+      "chain_upper_bound": 75207222462212729609775,
+      "minimum_rho": "1106847152629/83242900039435930315457507033926052",
+      "minimum_weights": [
+        93
+      ],
+      "n": 234,
+      "t": 47
+    },
+    {
+      "chain_upper_bound": 94009028077765912012218,
+      "minimum_rho": "1106847152629/104053625049294912894321883792407565",
+      "minimum_weights": [
+        93
+      ],
+      "n": 235,
+      "t": 47
+    },
+    {
+      "chain_upper_bound": 117386934530966958914728,
+      "minimum_rho": "3545662912659/416214500197179651577287535169630260",
+      "minimum_weights": [
+        93
+      ],
+      "n": 236,
+      "t": 47
+    },
+    {
+      "chain_upper_bound": 146424755178100890856792,
+      "minimum_rho": "14960603007/2190602632616735008301513342998054",
+      "minimum_weights": [
+        93,
+        95
+      ],
+      "n": 237,
+      "t": 47
+    },
+    {
+      "chain_upper_bound": 183416272275726379073245,
+      "minimum_rho": "11943338535/2190602632616735008301513342998054",
+      "minimum_weights": [
+        95
+      ],
+      "n": 238,
+      "t": 48
+    },
+    {
+      "chain_upper_bound": 229510413999469134023590,
+      "minimum_rho": "11943338535/2741120571703663177927024549615366",
+      "minimum_weights": [
+        95
+      ],
+      "n": 239,
+      "t": 48
+    },
+    {
+      "chain_upper_bound": 286888017499336417529487,
+      "minimum_rho": "4777335414/1370560285851831588963512274807683",
+      "minimum_weights": [
+        95
+      ],
+      "n": 240,
+      "t": 48
+    },
+    {
+      "chain_upper_bound": 358238405271192106863246,
+      "minimum_rho": "4777335414/1711425020156950326115059369060371",
+      "minimum_weights": [
+        95
+      ],
+      "n": 241,
+      "t": 48
+    },
+    {
+      "chain_upper_bound": 446874711730043762169616,
+      "minimum_rho": "4777335414/2134870385968979272782702924291803",
+      "minimum_weights": [
+        95,
+        97
+      ],
+      "n": 242,
+      "t": 48
+    },
+    {
+      "chain_upper_bound": 559745128610312547459880,
+      "minimum_rho": "102978118924/57641500421162440365132978955878681",
+      "minimum_weights": [
+        97
+      ],
+      "n": 243,
+      "t": 49
+    },
+    {
+      "chain_upper_bound": 700399032722647495283132,
+      "minimum_rho": "27432695615/19213833473720813455044326318626227",
+      "minimum_weights": [
+        97
+      ],
+      "n": 244,
+      "t": 49
+    },
+    {
+      "chain_upper_bound": 875498790903309369103915,
+      "minimum_rho": "21946156492/19213833473720813455044326318626227",
+      "minimum_weights": [
+        97
+      ],
+      "n": 245,
+      "t": 49
+    },
+    {
+      "chain_upper_bound": 1093262449554386318779509,
+      "minimum_rho": "10973078246/11996454402373908908479452473050893",
+      "minimum_weights": [
+        97
+      ],
+      "n": 246,
+      "t": 49
+    },
+    {
+      "chain_upper_bound": 1363817298181481922921912,
+      "minimum_rho": "88850836/121176307094685948570499519929807",
+      "minimum_weights": [
+        97,
+        99
+      ],
+      "n": 247,
+      "t": 49
+    },
+    {
+      "chain_upper_bound": 1708215605803068267094113,
+      "minimum_rho": "2149617/3672009305899574199106046058479",
+      "minimum_weights": [
+        99
+      ],
+      "n": 248,
+      "t": 50
+    },
+    {
+      "chain_upper_bound": 2137415506758613057821277,
+      "minimum_rho": "8633/18452308069847106528171085721",
+      "minimum_weights": [
+        99
+      ],
+      "n": 249,
+      "t": 50
+    },
+    {
+      "chain_upper_bound": 2671769383448266322276596,
+      "minimum_rho": "34532/92261540349235532640855428605",
+      "minimum_weights": [
+        99
+      ],
+      "n": 250,
+      "t": 50
+    }
+  ],
+  "symbolic_proof_location": "manuscript/a286874_bounds.tex"
+}

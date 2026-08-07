@@ -1,6 +1,7 @@
 {
   "all_certificates_passed": true,
   "certificate_files": [
+    "certificates/chain_formula.json",
     "certificates/a15_exact.json",
     "certificates/a16_upper_54.json",
     "certificates/a17_exact.json"
@@ -17,7 +18,8 @@
       "lower": 48,
       "upper": 54
     },
-    "A286874(17)": 68
+    "A286874(17)": 68,
+    "all_dimensions_private_chain_bound": "For n>=3 and t=ceiling((n-2)/5), A286874(n)<=floor(C(n,t)/C(2t-1,t))"
   },
   "runtime_dependency": "Python standard library only"
 }

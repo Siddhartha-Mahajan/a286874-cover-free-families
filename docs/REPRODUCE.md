@@ -15,6 +15,7 @@ python3 scripts/replay_all.py
 
 This regenerates:
 
+- `certificates/chain_formula.json`;
 - `certificates/a15_exact.json`;
 - `certificates/a16_upper_54.json`;
 - `certificates/a17_exact.json`;
@@ -23,13 +24,18 @@ This regenerates:
 ## Individual claims
 
 ```sh
+python3 scripts/certify_chain_formula.py
 python3 scripts/certify_a15_exact.py
 python3 scripts/certify_a16_upper.py
 python3 scripts/certify_a17_exact.py
 ```
 
-The `a(15)` replay checks all 788 classified extremal `a(14)` families, the
-44-member incidence contradiction, the exact 98-vertex degree-15 gluing graph,
+The chain-formula replay compares the defining rational sums with both closed
+forms at every weight for `3<=n<=250`, checks the minimizing-weight rule, and
+checks the resulting integral bound.  The all-`n` statement itself is proved
+symbolically in the manuscript.  The `a(15)` replay checks all 788 classified
+extremal `a(14)` families, the 44-member incidence contradiction, the exact
+98-vertex degree-15 gluing graph,
 and the final seven profiles.  The `a(16)` replay enumerates and eliminates all
 97 chain-feasible 55-member profiles.  The `a(17)` replay verifies both the
 68-word construction and all 17 exact chain masses.

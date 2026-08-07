@@ -24,13 +24,17 @@ def load(name: str) -> dict:
 
 
 def main() -> None:
+    run("certify_chain_formula.py")
     run("certify_a15_exact.py")
     run("certify_a16_upper.py")
     run("certify_a17_exact.py")
 
+    chain = load("chain_formula.json")
     a15 = load("a15_exact.json")
     a16 = load("a16_upper_54.json")
     a17 = load("a17_exact.json")
+    if not chain["proved"] or chain["implementation_checked_range"] != [3, 250]:
+        raise AssertionError("all-dimensions chain-formula audit failed")
     if not a15["proved"] or a15["claim"] != "A286874(15)=42":
         raise AssertionError("a(15) replay summary failed")
     if not a16["proved"] or not a16["proves_no_55_member_family"]:
@@ -46,12 +50,17 @@ def main() -> None:
     ]
     summary = {
         "package_claims": {
+            "all_dimensions_private_chain_bound": (
+                "For n>=3 and t=ceiling((n-2)/5), "
+                "A286874(n)<=floor(C(n,t)/C(2t-1,t))"
+            ),
             "A286874(15)": 42,
             "A286874(16)": {"lower": 48, "upper": 54},
             "A286874(17)": 68,
         },
         "all_certificates_passed": True,
         "certificate_files": [
+            "certificates/chain_formula.json",
             "certificates/a15_exact.json",
             "certificates/a16_upper_54.json",
             "certificates/a17_exact.json",

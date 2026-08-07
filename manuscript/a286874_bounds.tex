@@ -13,7 +13,7 @@
 \newcommand{\binomc}[2]{\binom{#1}{#2}}
 \newcommand{\F}{\mathcal F}
 
-\title{Two Exact Values and a New Upper Bound\\
+\title{Two Exact Values and an All-Dimensions Upper Bound\\
 for Binary 2-Cover-Free Families}
 \author{Siddhartha Mahajan}
 \date{August 2026}
@@ -31,7 +31,13 @@ equivalently, $a(n)$ is the maximum number of columns in an $n$-row binary
  a(15)=42,\qquad 48\leq a(16)\leq54,\qquad a(17)=68.
 \]
 The common upper-bound tool is a mixed-weight private-subset inequality on
-random maximal chains.  At $n=17$ it matches the 68 blocks of an
+random maximal chains.  In closed form it proves that, for $n\geq3$ and
+$t=\lceil(n-2)/5\rceil$,
+\[
+ a(n)\leq
+ \left\lfloor\frac{\binom nt}{\binom{2t-1}t}\right\rfloor.
+\]
+At $n=17$ it matches the 68 blocks of an
 $S(3,5,17)$.  At $n=15$ it is combined with hereditary row cells, the
 complete classification of the 28-member extremal families on 14 points,
 and finite profile and compatibility-graph certificates.  At $n=16$, an
@@ -60,7 +66,6 @@ The historical 28-vector lower-bound construction at $n=14$ was recorded by
 Dmitry Kamenetsky~\cite{kamenetsky-a286874}; Steinar H. Gunderson later proved
 exactness and supplied the complete classification~\cite{oeis-a303977}.  The
 previously recorded exact values therefore ended at $a(14)=28$, while
-Gunderson's
 Gunderson's OEIS attachment gave lower bounds $42,48,52$ at
 $n=15,16,17$~\cite{gunderson-a286874}.  The complete classification of the
 $a(14)$ extremals, also contributed by Gunderson as an attachment to OEIS
@@ -112,7 +117,13 @@ and $\Pr(R_F=F)=\binomc nw^{-1}$.  The private subsets of $F$ form an upset,
 so the chain meets one exactly when $R_F$ is private.
 
 Pair every subset of $F$ with its complement in $F$.  At least one side is
-private by Lemma~\ref{lem:private}, and the larger side has the smaller
+private by Lemma~\ref{lem:private}.  For $0\leq s\leq w/2$ and $w<n$,
+\[
+ \frac{\mu_{n,w}(w-s)}{\mu_{n,w}(s)}
+ =\frac{(w-s)!(n-w+s-1)!}{s!(n-s-1)!}\leq1,
+\]
+where the final ratio is a product of $w-2s$ factors whose numerators are
+smaller than their denominators.  Thus the larger side has no greater
 $\mu$-mass.  Define
 \begin{align*}
  \rho(n,2t-1)
@@ -137,16 +148,104 @@ meet private subsets owned by two different members.  The events are
 therefore disjoint.
 \end{proof}
 
-All values of $\mu$ and $\rho$ used below are evaluated as reduced rational
-numbers by \path{scripts/common.py}.
+\section{Closed form and the all-dimensions bound}
+
+The chain masses admit simple binomial forms.
+
+\begin{proposition}\label{prop:closed-rho}
+For every admissible $n$ and $t$,
+\begin{align}
+ \rho(n,2t-1)
+ &=\frac{\binom{n-t}{t-1}}{\binom n{2t-1}}
+  =\frac{\binom{2t-1}t}{\binom nt},
+  \label{eq:rho-odd}\\
+ \rho(n,2t)
+ &=\frac n{2t}\frac{\binom{n-t-1}{t-1}}{\binom n{2t}}.
+  \label{eq:rho-even}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+For $s<w$, direct cancellation gives
+\[
+ \binom ws\mu_{n,w}(s)
+ =\frac{\binom{n-s-1}{w-s}}{\binom nw}.
+\]
+Substitution in the two definitions of $\rho$, followed by the
+hockey-stick identity, gives equations~\eqref{eq:rho-odd} and
+\eqref{eq:rho-even}.  The second expression in~\eqref{eq:rho-odd} follows
+by cancelling factorials.
+\end{proof}
+
+Taking reciprocals in Proposition~\ref{prop:closed-rho} recovers the
+corresponding classical uniform-layer bounds of Erd\H{o}s, Frankl and
+F\"uredi~\cite{eff1982}.  The mixed-weight inequality in
+Theorem~\ref{thm:chain} combines the masses from all layers, so minimizing
+the closed forms gives a universal bound for unrestricted families.
+
+\begin{theorem}[All-dimensions private-chain bound]\label{thm:all-n}
+For $n\geq3$, put
+\[
+ t=\left\lceil\frac{n-2}{5}\right\rceil.
+\]
+Then
+\begin{equation}\label{eq:all-n-bound}
+ a(n)\leq
+ \left\lfloor\frac{\binom nt}{\binom{2t-1}t}\right\rfloor.
+\end{equation}
+The minimum chain mass occurs at weight $2t-1$.  There is also a minimizing
+weight $2t+1$ precisely when $n\equiv2\pmod5$.
+\end{theorem}
+
+\begin{proof}
+Equations~\eqref{eq:rho-odd} and~\eqref{eq:rho-even} give
+\begin{align*}
+ \frac{\rho(n,2t)}{\rho(n,2t-1)}&=\frac n{n-t}>1,\\
+ \frac{\rho(n,2t+1)}{\rho(n,2t-1)}
+ &=\frac{2(2t+1)}{n-t}.
+\end{align*}
+Thus an even weight never minimizes.  Successive odd-weight masses decrease
+while $5t<n-2$, increase while $5t>n-2$, and tie when $5t=n-2$.
+Consequently their minimum is as stated.  Every member of an extremal family
+has chain mass at least
+$\binom{2t-1}t/\binom nt$, and Theorem~\ref{thm:chain} now gives
+equation~\eqref{eq:all-n-bound}.
+\end{proof}
+
+The right side of~\eqref{eq:all-n-bound} is
+$\Theta((5/4)^n)$.  Indeed $t=n/5+O(1)$, and Stirling's formula gives
+\[
+ \log_2\binom nt-\log_2\binom{2t-1}t
+ =n\bigl(H(1/5)-2/5\bigr)+O(1)
+ =n\log_2(5/4)+O(1),
+\]
+where $H$ is binary entropy.  Some immediate values of the bound are
+\begin{center}
+\begin{tabular}{c@{\qquad}c@{\qquad}c}
+\toprule
+$n$ & minimizing weight(s) & private-chain bound \\
+\midrule
+15 & 5   & $a(15)\leq45$ \\
+16 & 5   & $a(16)\leq56$ \\
+17 & 5,7 & $a(17)\leq68$ \\
+18 & 7   & $a(18)\leq87$ \\
+19 & 7   & $a(19)\leq110$ \\
+20 & 7   & $a(20)\leq138$ \\
+21 & 7   & $a(21)\leq171$ \\
+22 & 7,9 & $a(22)\leq209$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+The later sections sharpen the first two entries by additional arguments.
+All values of $\mu$ and $\rho$ used in the finite reductions are evaluated
+as reduced rational numbers by \path{scripts/common.py};
+\path{scripts/certify_chain_formula.py} independently checks the closed
+forms, minimizing weights and integral bounds through $n=250$.
 
 \section{The exact value at 17}
 
-At $n=17$, direct evaluation gives
-\[
- \min_{1\leq w\leq17}\rho(17,w)=\frac1{68},
-\]
-with equality only at $w=5,7$.  Theorem~\ref{thm:chain} therefore gives
+At $n=17$, Theorem~\ref{thm:all-n} gives
+$\min_w\rho(17,w)=1/68$, attained only at weights 5 and 7, and hence
 $a(17)\leq68$ for arbitrary mixed weights.
 
 The file \texttt{constructions/a17\_68.txt} contains 68 weight-5 blocks found
@@ -155,26 +254,6 @@ The replay verifies that distinct blocks meet in at most two points and that
 their $68\binomc53=680=\binomc{17}3$ triples are all distinct.  Hence they
 form an $S(3,5,17)$ and are 2-cover-free: a third 5-block has at most four
 points in the union of any two others.  Thus $a(17)=68$.
-
-The same theorem applies at every dimension, whether or not it is sharp.  An
-exact evaluation of the minimum chain mass gives the following immediate
-consequences of this method:
-\begin{center}
-\begin{tabular}{c@{\qquad}c@{\qquad}c@{\qquad}c}
-\toprule
-$n$ & $\min_w\rho(n,w)$ & minimizing weight(s) & resulting bound \\
-\midrule
-18 & $7/612$   & 7   & $a(18)\leq87$ \\
-19 & $35/3876$ & 7   & $a(19)\leq110$ \\
-20 & $7/969$   & 7   & $a(20)\leq138$ \\
-21 & $1/171$   & 7   & $a(21)\leq171$ \\
-22 & $1/209$   & 7,9 & $a(22)\leq209$ \\
-\bottomrule
-\end{tabular}
-\end{center}
-These are universal mixed-weight bounds furnished by
-Theorem~\ref{thm:chain}; no assertion is made here that they improve every
-previously published bound.
 
 \section{The exact value at 15}
 
@@ -335,7 +414,10 @@ from the repository root verifies the following independently:
  \item the 98-vertex graph and clique number 14;
  \item the seven final $n=15$ profiles and their exact rational slacks;
  \item all 97 $n=16,m=55$ profiles and every joint defect allocation;
- \item all mixed-weight chain masses used at $n=15,16,17$.
+ \item all mixed-weight chain masses used at $n=15,16,17$;
+ \item the closed formulas for $\rho$, their minimizing weights, and
+       equation~\eqref{eq:all-n-bound} through $n=250$ as an implementation
+       check of the symbolic proof.
 \end{itemize}
 No floating-point optimization, external solver or timeout is used in a final
 claim.  The role and provenance of every file are described in
@@ -416,8 +498,14 @@ Paths are relative to the repository root.
  $\rho(17,w)\geq1/68$ for all $1\leq w\leq17$.  It also evaluates the same
  exact bound for $18\leq n\leq22$ and records the five displayed corollaries.
 
+ \item[\path{scripts/certify_chain_formula.py}.]
+ Independent exact-arithmetic audit of Proposition~\ref{prop:closed-rho} and
+ Theorem~\ref{thm:all-n}.  For every $3\leq n\leq250$ and every possible
+ weight it compares the defining sum for $\rho$ with the closed form, checks
+ the predicted minimizing weight or tie, and verifies the integral bound.
+
  \item[\path{scripts/replay_all.py}.]
- The public replay entry point.  It invokes all three certifiers, checks their
+ The public replay entry point.  It invokes all four certifiers, checks their
  terminal assertions, and writes the aggregate summary.  Running this file is
  sufficient to reproduce every computational assertion in the paper.
 
@@ -469,8 +557,12 @@ are not inputs to the lower-bound verification or to any upper-bound proof.
  chain masses used for $n=17$, together with the minimum masses, minimizing
  weights and resulting universal bounds for $18\leq n\leq22$.
 
+ \item[\path{certificates/chain_formula.json}.]
+ Deterministic record of the closed-form audit for $3\leq n\leq250$, including
+ the predicted minimizers and universal integer bound in every dimension.
+
  \item[\path{certificates/replay_summary.json}.]
- Aggregate pass/fail record written only after all three individual
+ Aggregate pass/fail record written only after all four individual
  certificates succeed.
 
  \item[\path{SUPPORTING_FILES.md}.]
