@@ -5,6 +5,8 @@ type: software
 authors:
   - family-names: Mahajan
     given-names: Siddhartha
+  - family-names: Chopra
+    given-names: Paras
 version: 1.0.0
 date-released: 2026-08-07
 abstract: >-

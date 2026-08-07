@@ -1,6 +1,6 @@
 # Exact values and an all-dimensions upper bound for A286874
 
-Reproducible research package by **Siddhartha Mahajan** for the binary
+Reproducible research package by **Siddhartha Mahajan and Paras Chopra** for the binary
 2-cover-free-family sequence [OEIS A286874](https://oeis.org/A286874).
 
 The package establishes
@@ -79,9 +79,9 @@ The precise mathematical role of the private-chain inequality and each finite
 certificate is explained in the manuscript; the computations are reductions
 of explicitly stated lemmas, not evidence from solver timeouts.
 
-## Author
+## Authors
 
-Siddhartha Mahajan, 2026.
+Siddhartha Mahajan and Paras Chopra, 2026.
 
 ## Construction and data credits
 
